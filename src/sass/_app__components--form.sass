@@ -1,0 +1,18 @@
+/**
+ * Позначка обов'язкового поля *
+ */
+.required-label
+	&::before
+		content: '*'
+		position: absolute
+		top: rem(-2px)
+		right: rem(-12px)
+		display: block
+	&--red::before
+		color: $danger
+
+
+
+
+
+

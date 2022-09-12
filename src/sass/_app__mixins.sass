@@ -1,0 +1,39 @@
+// CONVERTING PX TO REM
+@function rem($size)
+	@return ($size / 16px) + rem
+
+
+// Dark / Light mode
+=dark
+	body.dark
+		@content
+
+
+// Responsive breakpoints
+=r($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+
+=rmin($width)
+	@media only screen and (min-width: $width+ "px")
+		@content
+
+=xxl
+	+r(1400)
+		@content
+
+=xl
+	+r(1200)
+		@content
+
+=lg
+	+r(992)
+		@content
+
+=md
+	+r(768)
+		@content
+
+=sm
+	+r(576)
+		@content

@@ -1,0 +1,18 @@
+{
+	"page": {
+
+		"home"     : "index.html",
+		"catalog"  : "catalog.html",
+		"product"  : "product.html",
+		"contacts" : "contacts.html",
+		"article"  : "article.html",
+		"profile"  : "profile.html",
+		"success"  : "success.html",
+		"auth"     : "auth.html",
+
+		"components"  : "components.html",
+		"404"         : "404.html"
+	},
+
+	"page-social-img": "img/page-home-social.jpg"
+}

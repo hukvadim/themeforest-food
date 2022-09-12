@@ -1,0 +1,34 @@
+\:root
+	--nav-size: #{rem($nav-size)}
+	--sidebar-size: #{rem($sidebar-size)}
+	--sidebar-cart-size: #{rem($sidebar-cart-size)}
+
+body
+	&.nav-padding
+		padding-top: var(--nav-size)
+
+svg
+	--sz: 1.5rem 
+	--w: var(--sz)
+	--h: var(--sz)
+	position: relative
+	width: var(--w)
+	height: var(--h)
+
+.d-flex-center
+	display: flex
+	justify-content: center
+	align-items: center
+
+.img
+	width: 100%
+
+.abs-center
+	--t: 50%
+	--l: 50%
+	position: absolute
+	top: var(--t)
+	left: var(--l)
+	transition: translate(calc(var(--t) * -1), calc(var(--l) * -1))
+
+
