@@ -5,81 +5,58 @@ $bem: '.nav'
 	left: 0
 	width: 100%
 	min-height: var(--nav-size)
+	background-color: var(--bs-white)
 	& &__container
 		justify-content: space-between
-	& &__btn-menu
-		--bs-btn-border-width: 0
-		--bs-btn-border-radius: 0
-		--bs-btn-padding-x: 0
-		--bs-btn-padding-y: 0
-		--bs-btn-line-height: 1
-		--bs-btn-font-weight: 600
-		--bs-btn-font-size: #{rem(8px)}
-		--bs-btn-color: var(--bs-white)
-		--bs-btn-hover-color: var(--bs-white)
-		--bs-btn-bg: var(--bs-gray-900)
-		--bs-btn-hover-bg: var(--bs-gray-800)
-		--bs-btn-active-bg: var(--bs-black)
-		--bs-btn-active-color: var(--bs-white)
-		text-transform: uppercase
-		width: rem(80px)
-		height: rem(80px)
+	& &__logo
+		width: 100%
+		&-link
+			transition: .25s
+			&:hover
+				opacity: .85
+		&-hold
+			min-width: rem(200px)
+			margin: 0 rem(20px)
+	& &__left,
+	& &__right
 		display: flex
-		justify-content: center
-		align-items: center
-		&:hover
-			#{$bem}__btn-menu
-				&-text
-					&::before
-						width: rem(19px)
-					&::after
-						width: rem(28px)
-		&-text
-			position: relative
-			display: flex
-			align-items: flex-end
-			letter-spacing: rem(2px)
-			height: rem(24px)
-			min-width: rem(23px)
-			&::before,
-			&::after
-				content: ''
-				position: absolute
-				left: 0
-				top: 0
-				width: rem(28px)
-				height: rem(2px)
-				background-color: var(--bs-white)
-				transition: .35s
-			&::before
-			&::after
-				width: rem(19px)
-				top: rem(8px)
+		width: 50%
+	& &__left
+	& &__right
+		justify-content: flex-end
+	& &__btn-menu
+		min-width: var(--nav-size)
+		width: var(--nav-size)
+		height: var(--nav-size)
+		border-radius: 0 0 rem($bdrs-lg) 0
 	&__btn
 		--bs-btn-border-width: 0
 		--bs-btn-border-radius: 0
-		--bs-btn-padding-x: #{rem(10px)}
+		--bs-btn-padding-x: #{rem(15px)}
 		--bs-btn-padding-y: 0
 		--bs-btn-line-height: 1
 		--bs-btn-font-weight: 600
 		--bs-btn-font-size: #{rem(16px)}
-		--bs-btn-color: var(--bs-gray-900)
+		--bs-btn-color: #{$link-color-deafult}
 		--bs-btn-hover-color: var(--bs-link-color)
-		--bs-btn-hover-bg: var(--bs-gray-100)
+		--bs-btn-hover-bg: transparent
 		min-height: var(--nav-size)
 		display: inline-flex
 		justify-content: center
 		align-items: center
+		margin: 0 rem(5px)
 		// --bs-btn-active-bg: var(--bs-black)
 		// --bs-btn-active-color: var(--bs-white)
 	&__hold
+		width: 100%
 	&__cart
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-bg: var(--bs-gray-100)
+		--bs-btn-hover-bg: var(--bs-gray-100)
 		min-width: var(--sidebar-cart-size)
 		height: var(--nav-size)
-		background-color: var(--bs-gray-100)
-		font-weight: 600
-		font-size: rem(16px)
-		color: var(--bs-gray-900)
 		text-transform: uppercase
+		margin-left: rem(30px)
+		border-radius: 0 0 0 rem($bdrs-lg)
 		svg.icon
 			margin-right: rem(14px)

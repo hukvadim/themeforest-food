@@ -1,5 +1,53 @@
+$bem: '.btn'
 .btn
 	position: relative
+	&.btn-line-text
+		--bs-btn-border-width: 0
+		--bs-btn-border-radius: 0
+		--bs-btn-padding-x: 0
+		--bs-btn-padding-y: 0
+		--bs-btn-line-height: 1
+		--bs-btn-font-weight: 600
+		--bs-btn-font-size: #{rem(8px)}
+		--bs-btn-color: var(--bs-white)
+		--bs-btn-hover-color: var(--bs-white)
+		--bs-btn-bg: var(--bs-gray-900)
+		--bs-btn-hover-bg: var(--bs-gray-800)
+		--bs-btn-active-bg: var(--bs-black)
+		--bs-btn-active-color: var(--bs-white)
+		text-transform: uppercase
+		width: rem(80px)
+		height: rem(80px)
+		display: flex
+		justify-content: center
+		align-items: center
+		&:hover
+			#{$bem}-line-text__span
+				&::before
+					width: rem(19px)
+				&::after
+					width: rem(28px)
+		#{$bem}-line-text__span
+			position: relative
+			display: flex
+			align-items: flex-end
+			letter-spacing: rem(2px)
+			height: rem(24px)
+			min-width: rem(23px)
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				left: 0
+				top: 0
+				width: rem(28px)
+				height: rem(2px)
+				background-color: var(--bs-white)
+				transition: .35s
+			&::before
+			&::after
+				width: rem(19px)
+				top: rem(8px)
 	&.btn-gray-100
 		--bs-btn-color: var(--bs-gray-100) !important
 	&.btn-gray-200

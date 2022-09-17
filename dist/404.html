@@ -56,8 +56,8 @@
 		<symbol id="icon-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
 		</symbol>
-		<symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-			<polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+		<symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
 		</symbol>
 
 
@@ -67,21 +67,28 @@
 
 <header class="nav">
 	<div class="nav__container container-fluid px-0 d-flex">
-		<a class="nav__btn-menu btn js-call-menu" href="#">
-			<span class="nav__btn-menu-text">Menu</span>
-		</a>
-		<div class="nav__hold">
-			logo
-			<a href="#" class="nav__btn btn link-gray-800">
-				<svg class="icon icon-gift"><use xlink:href="#icon-gift"></use></svg>
+		<div class="nav__left">
+			<a class="nav__btn-menu btn btn-line-text js-call-menu" href="#">
+				<span class="nav__btn-menu-text btn-line-text__span">Menu</span>
+			</a>
+		</div>
+		<div class="nav__logo-hold d-flex-center">
+			<a href="index.html" class="nav__logo-link">
+				<img src="img/logo-dark2.png" alt="" class="nav__logo logo">
+			</a>
+		</div>
+
+		<div class="nav__right">
+			<a href="#" class="nav__btn btn">
+				<svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg>
 			</a>
 			<a href="#" class="nav__btn btn">
 				<svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>
 			</a>
-		</div>
-		<div class="nav__cart d-flex-center">
-			<svg class="icon icon-shopping-bag"><use xlink:href="#icon-shopping-bag"></use></svg>
-			Your order
+			<a href="#" class="nav__cart nav__btn btn d-flex-center">
+				<svg class="icon icon-shopping-bag"><use xlink:href="#icon-shopping-bag"></use></svg>
+				Your order
+			</a>
 		</div>
 	</div>
 </header>
