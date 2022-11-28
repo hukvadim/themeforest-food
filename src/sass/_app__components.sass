@@ -1,0 +1,21 @@
+.title-square
+	text-align: center
+	position: relative
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+	&::before
+	&::after
+	& &__small
+		font-size: rem(15px)
+		color: var(--bs-gray)
+		display: block
+		margin-bottom: rem(8px)
+	& &__main
+		font-size: rem(30px)
+		text-transform: uppercase
+		font-weight: 700

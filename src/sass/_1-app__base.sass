@@ -1,11 +1,30 @@
 \:root
-	--nav-size: #{rem($nav-size)}
-	--sidebar-size: #{rem($sidebar-size)}
+	--nav-size:          #{rem($nav-size)}
+	--sidebar-size:      #{rem($sidebar-size)}
 	--sidebar-cart-size: #{rem($sidebar-cart-size)}
+	--icon-padding:      #{rem($icon-padding)}
+	--border-radius: 8px;
+	--border-radius-big: 12px;
+	--border-radius-mini: 4px;
+
+html,
+body.sticky-footer
+	height: 100%
 
 body
-	&.nav-padding
-		padding-top: var(--nav-size)
+	font-weight: 500
+	&.sticky-footer
+		display: flex
+		flex-direction: column
+	&.bg-white
+		background-color: var(--bs-white)
+
+.nav-padding
+	padding-top: var(--nav-size)
+
+a
+	position: relative
+	transition: .25s
 
 svg
 	--sz: 1.5rem 
@@ -15,20 +34,17 @@ svg
 	width: var(--w)
 	height: var(--h)
 
-.d-flex-center
-	display: flex
-	justify-content: center
-	align-items: center
+.icon-padding
+	padding-right: var(--icon-padding)
+
+.ff-num
+	// font-family: 'Rubik', sans-serif // Old version
+	font-family: 'Montserrat', sans-serif
+	font-weight: 600
 
 .img
 	width: 100%
 
-.abs-center
-	--t: 50%
-	--l: 50%
-	position: absolute
-	top: var(--t)
-	left: var(--l)
-	transition: translate(calc(var(--t) * -1), calc(var(--l) * -1))
+
 
 

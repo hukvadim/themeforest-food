@@ -1,27 +1,84 @@
-@@include('0--system--header.html', {
+@@include('--system-header.html', {
 	"title": 'Components',
 	"desc": '',
 	"keywords": '',
 	"social": '',
+	"navPadding": true,
+	"stickyFooter": true,
 	"page-class": 'page-components',
 })
 
-@@include('0--block--nav.html')
+@@include('block--nav.html')
 
 
-<h1>Buttons</h1>
-<button type="button" class="btn btn-primary">Primary</button>
-<button type="button" class="btn btn-secondary">Secondary</button>
-<button type="button" class="btn btn-success">Success</button>
-<button type="button" class="btn btn-danger">Danger</button>
-<button type="button" class="btn btn-warning">Warning</button>
-<button type="button" class="btn btn-info">Info</button>
-<button type="button" class="btn btn-light">Light</button>
-<button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button>
+@@include('block--gallery-full.html')
 
 
-@@include('0--block--footer.html')
+<div class="container-fluid">
 
-@@include('0--system--footer.html')
+	@@include('block--card-product.html')
+
+	<br><br>
+	<h1>Buttons</h1>
+	<button type="button" class="btn btn-primary btn-sm">Primary</button>
+	<button type="button" class="btn btn-primary">Primary</button>
+	<button type="button" class="btn btn-primary btn-lg">Primary</button>
+	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+
+	<br><br>
+	<button type="button" class="btn btn-shadow btn-sm">Детальніше про доставку</button>
+	<button type="button" class="btn btn-shadow">Детальніше про доставку</button>
+	<button type="button" class="btn btn-shadow btn-lg">Детальніше про доставку</button>
+	<br><br>
+
+	<button type="button" class="btn btn-secondary">Secondary</button>
+	<button type="button" class="btn btn-success">Success</button>
+	<button type="button" class="btn btn-danger">Danger</button>
+	<button type="button" class="btn btn-warning">Warning</button>
+	<button type="button" class="btn btn-info">Info</button>
+	<button type="button" class="btn btn-light">Light</button>
+	<button type="button" class="btn btn-dark">Dark</button>
+	<button type="button" class="btn btn-link">Link</button>
+	<button type="button" class="btn btn-shadow ">Детальніше про доставку</button>
+	<a href="#">More</a>
+
+	<br><br>
+
+	<button type="button" class="btn btn-outline-primary">Primary</button>
+	<button type="button" class="btn btn-outline-secondary">Secondary</button>
+	<button type="button" class="btn btn-outline-success">Success</button>
+	<button type="button" class="btn btn-outline-danger">Danger</button>
+	<button type="button" class="btn btn-outline-warning">Warning</button>
+	<button type="button" class="btn btn-outline-info">Info</button>
+	<button type="button" class="btn btn-outline-light">Light</button>
+	<button type="button" class="btn btn-outline-dark">Dark</button>
+
+
+	<br><br><br><br>
+	<h1>Forms</h1>
+	<form style="max-width: 300px;">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">Email address</label>
+			<input type="email" class="form-control" id="exampleInputEmail1">
+			<div class="form-text">We'll never share your email with anyone else.</div>
+		</div>
+		<div class="mb-3 form-check">
+			<label class="form-check-label">
+				<input type="checkbox" class="form-check-input">Check me out
+			</label>
+			<br>
+			<label class="form-check-label">
+				<input type="radio" class="form-check-input">Check me out
+			</label>
+		</div>
+
+	</form>
+
+
+</div>
+
+
+@@include('--system-footer.html')

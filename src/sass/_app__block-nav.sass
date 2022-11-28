@@ -1,11 +1,12 @@
 $bem: '.nav'
-.nav
+.nav-base
 	position: absolute
 	top: 0
 	left: 0
 	width: 100%
 	min-height: var(--nav-size)
-	background-color: var(--bs-white)
+	z-index: 10
+	background-color: transparent
 	& &__container
 		justify-content: space-between
 	& &__logo
@@ -45,8 +46,9 @@ $bem: '.nav'
 		justify-content: center
 		align-items: center
 		margin: 0 rem(5px)
-		// --bs-btn-active-bg: var(--bs-black)
-		// --bs-btn-active-color: var(--bs-white)
+	.btn
+		.icon
+			--sz: #{rem(24px)}
 	&__hold
 		width: 100%
 	&__cart
@@ -60,3 +62,5 @@ $bem: '.nav'
 		border-radius: 0 0 0 rem($bdrs-lg)
 		svg.icon
 			margin-right: rem(14px)
+			&.icon-shopping-bag
+				top: rem(-1px)

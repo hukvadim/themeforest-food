@@ -1,6 +1,23 @@
 $bem: '.btn'
 .btn
+	--bs-btn-font-weight: 500
+	--bs-btn-line-height: 1
+	--bs-btn-padding-y: #{rem(13px)}
+	--bs-btn-padding-x: #{rem(25px)}
+	--bs-btn-border-width: #{rem(2px)}
+	--bs-btn-hover-bg: #{tint-color($blue, 35%)}
+	--bs-btn-hover-border-color: #{tint-color($blue, 35%)}
 	position: relative
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	svg.icon
+		--sz: var(--bs-btn-font-size)
+		top: 0.0625rem
+		&:first-child
+			margin-right: var(--icon-padding)
+		&:last-child
+			margin-left: var(--icon-padding)
 	&.btn-line-text
 		--bs-btn-border-width: 0
 		--bs-btn-border-radius: 0
@@ -48,6 +65,76 @@ $bem: '.btn'
 			&::after
 				width: rem(19px)
 				top: rem(8px)
+	&.btn-cart
+		--bs-btn-padding-x: #{rem(11px)}
+		--bs-btn-padding-y: #{rem(11px)}
+		.icon
+			--sz: 1.125rem
+			&.icon-cart
+				left: -0.0625rem
+		&.btn-sm
+			--bs-btn-padding-x: #{rem(5px)}
+			--bs-btn-padding-y: #{rem(5px)}
+			.icon
+				--sz: 1rem
+		&.btn-lg
+			--bs-btn-padding-x: #{rem(15px)}
+			--bs-btn-padding-y: #{rem(15px)}
+			.icon
+				--sz: 22px
+	&.btn-success
+		--bs-btn-color: #{rgba($black, .9)}
+	&.btn-danger
+		--bs-btn-bg: var(--bs-red)
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-hover-color: var(--bs-black)
+		--bs-btn-hover-bg: #{shade-color($red, 5%)}
+		--bs-btn-hover-border-color: #{shade-color($red, 5%)}
+	&.btn-warning
+		--bs-btn-color: #{rgba($black, .88)}
+	&.btn-info
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-hover-color: var(--bs-white)
+	&.btn-light
+		--bs-btn-hover-color: var(--bs-link-hover-color)
+		--bs-btn-hover-bg: #{$gray-200}
+		--bs-btn-hover-border-color: #{$gray-200}
+	&.btn-dark
+		--bs-btn-color: #{rgba($white, .92)}
+	&.btn-shadow
+		--bs-btn-bg: var(--bs-white)
+		--bs-btn-color: var(--bs-link-color)
+		--bs-btn-hover-bg: var(--bs-white)
+		--bs-btn-hover-color: var(--bs-link-hover-color)
+		box-shadow: 0 #{rem(1px)} #{rem(4px)} 0 rgba(25, 37, 37, 0.15)
+	
+	&.btn-outline-primary
+		--bs-btn-color: var(--bs-link-color)
+		--bs-btn-border-color: #{shade-color($blue, 5%)}
+		--bs-btn-hover-color: var(--bs-link-hover-color)
+		--bs-btn-hover-border-color: var(--bs-primary)
+	&.btn-outline-success
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-border-color: #{shade-color($green, 2%)}
+	&.btn-outline-danger
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-border-color: #{tint-color($red, 40%)}
+	&.btn-outline-warning
+		--bs-btn-color: var(--bs-black)
+		--bs-btn-border-color: #{tint-color($yellow, 10%)}
+	&.btn-outline-info
+		--bs-btn-color:  var(--bs-black)
+		--bs-btn-border-color: #{tint-color($cyan, 25%)}
+	&.btn-outline-secondary
+		--bs-btn-border-color: #{shade-color($gray-400, 2%)}
+	&.btn-outline-light
+		--bs-btn-color: var(--bs-gray-dark)
+		--bs-btn-border-color: var(--bs-gray-300)
+		--bs-btn-hover-color: var(--bs-link-hover-color)
+	&.btn-outline-dark
+		--bs-btn-border-color: #{$gray-700}
+		--bs-btn-hover-color: var(--bs-link-hover-color)
+
 	&.btn-gray-100
 		--bs-btn-color: var(--bs-gray-100) !important
 	&.btn-gray-200
@@ -66,3 +153,11 @@ $bem: '.btn'
 		--bs-btn-color: var(--bs-gray-800) !important
 	&.btn-gray-900
 		--bs-btn-color: var(--bs-gray-900) !important
+
+	&.btn-sm
+		--bs-btn-padding-y: #{rem(11px)}
+		--bs-btn-padding-x: #{rem(22px)}
+	&.btn-lg
+		--bs-btn-padding-y: #{rem(18px)}
+		--bs-btn-padding-x: #{rem(33px)}
+		--bs-btn-font-size: 18px

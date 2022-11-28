@@ -1,0 +1,40 @@
+.gallery-full
+	margin: rem(60px) 0
+	& > div
+		overflow: hidden
+	.slick-list
+		overflow: inherit !important
+		margin: 0 rem(-25px)
+	& &__wrapper
+		
+	& &__slide
+		--bg-color: #ffe2b6
+		background-color: var(--bg-color)
+		min-height: rem(580px)
+		border-radius: rem(30px)
+		padding: rem(150px) rem(100px)
+		display: flex
+		position: relative
+		margin: 0 rem(25px)
+		&-img
+			max-width: 100%
+			max-height: 100%
+			z-index: 1
+			&-hold-abs
+				position: absolute
+				bottom: 0
+				right: 0
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+		&-hold
+			max-width: rem(750px)
+			position: relative
+			z-index: 5
+		&-title
+			margin-bottom: rem(40px)
+		&-desk
+			margin-bottom: rem(40px)
+		&-btn
+			&-hold

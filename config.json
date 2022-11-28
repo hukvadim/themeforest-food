@@ -1,18 +1,58 @@
 {
+	"theme":      "Olivia",
+	"theme-link": "https://themeforest.net/",
+	"theme-link-text": "Olivia theme",
+
+	"logo-white": "img/logo-white.png",
+	"logo-black": "img/logo-dark.png",
+
+	"page-social-img": "img/page-home-social.jpg",
+
+
+	"demo": {
+		
+		"text": {
+			"tel"    : "+38 (093) 21 21 495",
+			"telHref": "+380932121495",
+			"work-hours"  : "Пн-Нд:  10.00 – 17.00",
+			"work-online" : "Працюємо зараз",
+			"work-offline": "Робочий день закінчено",
+			"footer-copyright": "© 2023 Company, Inc"
+		},
+
+		"img": {
+			"payment": "img/static/payments.png"
+		}
+
+	},
+
+
 	"page": {
 
-		"home"     : "index.html",
-		"catalog"  : "catalog.html",
-		"product"  : "product.html",
-		"contacts" : "contacts.html",
-		"article"  : "article.html",
-		"profile"  : "profile.html",
-		"success"  : "success.html",
-		"auth"     : "auth.html",
+		"home"        : "index.html",
+		"catalog"     : "catalog.html",
+		"product"     : "product.html",
+		"contacts"    : "contacts.html",
+		"article"     : "article.html",
+		"profile"     : "profile.html",
+		"success"     : "success.html",
+		"auth"        : "auth.html",
+		"news"        : "news.html",
+		"news-detail" : "news-detail.html",
 
+		"terms"       : "terms.html",
 		"components"  : "components.html",
 		"404"         : "404.html"
 	},
 
-	"page-social-img": "img/page-home-social.jpg"
+
+	"pages": {
+		"static": {
+			"page-1" : "Акції",
+			"page-2" : "Доставка і оплата",
+			"page-3" : "Зв'язатися з нами",
+			"page-4" : "Політика персональних даних",
+			"page-5" : "Угода про умови доставки"
+		}
+	}
 }

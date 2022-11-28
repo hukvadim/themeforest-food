@@ -1,2 +1,63 @@
 .footer
-	
+	margin-top: auto
+	padding: 0 0 0
+	& &__wrapper
+		margin-top: rem(50px)
+		padding-top: rem(50px)
+	& &__text-el
+		--bs-nav-link-color: var(--bs-body-color)
+		--bs-link-color: var(--bs-body-color)
+		font-size: rem(13px)
+	& &__top
+		padding-bottom: rem(80px)
+		&-hold
+	& &__category
+		&-title
+		&-list
+			.nav-item
+			.nav-link
+				--bs-nav-link-font-size: #{rem(14px)}
+				--bs-nav-link-font-weight: 600
+				--bs-nav-link-padding-y: #{rem(7px)}
+				--bs-nav-link-padding-x: 0
+				display: inline-block
+	& &__order
+		&-content
+		&-main-tel
+			--bs-link-color: var(--bs-gray-900)
+			font-size: rem(20px)
+			font-weight: 600
+			display: inline-block
+			margin-bottom: rem(8px)
+		&-work-hours
+			font-size: rem(14px)
+			color: var(--bs-gray-600)
+			margin-bottom: rem(10px)
+		&-work-status
+	& &__contacts
+		&-title
+		&-content
+			.contact-big-link
+			.contact-text
+	& &__bottom
+		--bs-bg-opacity: .2
+		&-box
+			padding: rem(10px) 0
+		&-hold
+			display: flex
+			justify-content: space-between
+			align-items: center
+			flex-wrap: wrap
+			min-height: rem(60px)
+		&-left,
+		&-right
+			// width: 40%
+		&-center
+			// width: 20%
+		&-right
+			display: flex
+			justify-content: flex-end
+		&-copyright
+			margin: 0
+		&-logo
+			&-link
