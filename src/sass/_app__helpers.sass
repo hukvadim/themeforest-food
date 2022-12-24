@@ -3,43 +3,11 @@ $fwList: 300 400 500 600 700 800 900
 	.fw-#{$fontWeight}
 		font-weight: $fontWeight
 
-.d-flex-center
-	display: flex
-	justify-content: center
-	align-items: center
-
-.abs-center
-	position: absolute
-	top: 50%
-	left: 50%
-	transform: translate(-50%, -50%)
-
-.transition
-	--time: 0.25s
-	--type: ease
-	--delay: 0s
-	--prop: all
-	transition: var(--time) var(--type) var(--delay) var(--prop)
-
-// .text-muted
-// 	color: var(--bs-gray)
-
-// Text limit 2 or 3 lines
-.trim-text
-	&,
-	&-3
-		-webkit-line-clamp: 2
-		-moz-line-clamp: 2
-		line-clamp: 2
-		overflow: hidden
-	&-3
-		-webkit-line-clamp: 3
-		-moz-line-clamp: 3
-		line-clamp: 3
-
-
-
 // Headers & text of different sizes specifically for our site
+$fsList: 10 12 14 16 18
+@each $fontSize in $fsList
+	.fs-#{$fontSize}
+		font-size: #{remNum($fontSize)}
 .fs
 	&-title
 		&-1 // Maximum size
@@ -47,123 +15,109 @@ $fwList: 300 400 500 600 700 800 900
 	&-text
 		&-1 // Maximum size
 			font-size: rem(20px)
-	&-14
-		font-size: rem(14px)
 
-// Single page details
-.page-title
-	margin: 0
-	font-weight: 700
+// Center elements
+.d-flex-inline-center,
+.d-flex-center
+	justify-content: center
+	align-items: center
+	&-x
+		justify-content: center
+	&-y
+		align-items: center
 
-.page-content
-	margin-top: rem(50px)
-	&--single-page
-		background-color: #f5f9fa
-		padding: 28px
-		border-radius: 4px
-	&-hold
-		margin-top: rem(50px)
-		.container
-			&--single-page
-				max-width: 960px
+.d-flex-center
+	&,
+	&-x,
+	&-y
+		display: flex
 
+.d-flex-inline-center
+	&,
+	&-x,
+	&-y
+		display: inline-flex
 
+.abs-center
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
 
-// Base box holder
-.box-hold
-	--mb: #{rem(40px)}
-	margin-bottom: var(--m)
-
-
-// All boxes have one title
-.box-title
-	--fs: #{rem(14px)}
-	--fw: 600
-	--tt: uppercase
-	--ls: #{rem(1px)}
-	--m : 0 0 #{rem(16px)}
-	color: var(--bs-gray)
-	font-size: var(--fs)
-	font-weight: var(--fw)
-	text-transform: var(--tt)
-	letter-spacing: var(--ls)
-	margin: var(--m)
-
-
-
-
-// Logo versions
-$bem: '.logo-img'
-.logo-img
-	--max-w: #{$logo-size}
+.abs-full-size
+	z-index: 1
+	position: absolute
+	left: 0
+	right: 0
 	width: 100%
-	max-width: $logo-size
-	opacity: 1
-	transition: .25s
-	&-hold
-		display: inline-block
-		position: relative
-		#{$bem}
-			&--black
-			&--white
-				position: absolute
-				top: 0
-				left: 0
-				opacity: 0
-	&--sm
-		max-width: #{$logo-size-sm}
+	height: 100%
+
+// Simple animation
+.transition
+	--time: 0.25s
+	--type: ease
+	--delay: 0s
+	--prop: all
+	transition: var(--time) var(--type) var(--delay) var(--prop)
+
+// Base margin or padding for all blocks
+.divider-blocks
+	padding: rem(100px) 0
+	&-m
+		margin: rem(100px) 0
+
+.divider-box
+	margin-bottom: rem(40px)
+
+// Text limit 2 or 3 lines
+.trim-text
+	-webkit-line-clamp: 2
+	-webkit-line-clamp: 2
+	line-clamp: 2
+	&,
+	&-3
+		-webkit-box-orient: vertical
+		display: -webkit-box
+		overflow: hidden
+	&-3
+		-webkit-line-clamp: 3
+		-moz-line-clamp: 3
+		line-clamp: 3
 
 
-// Price versions width old price
-.price
-	font-size: rem(18px)
-	font-weight: 500
-	line-height: 1.3
-	& &-currency
-		font-size: 75%
-		padding-left: rem(2px)
-	& &-old
-		margin-left: rem(10px)
-		position: relative
-		font-size: 75%
-		display: inline-block
-		text-align: right
-		color: var(--bs-gray-500)
-		&::before
-			content: ''
-			position: absolute
-			border-bottom: rem(1px) solid
-			top: 52%
-			left: 0
-			width: 100%
-			opacity: .75
+// Gallery offset img
+.gallery-offset-frame
+	padding-right: rem(50px)
+	padding-left: rem(50px)
+	overflow: hidden
+	.slick-list
+		overflow: inherit
+
+// Position minimal offset
+.offset-t
+	&-none
+		top: 0 !important
+	&-1px
+		&-up
+			top: rem(-1px) !important
+		&-down
+			top: rem(1px) !important
 
 
-
-// Nice link hover with border
-.link-hover
+// Svg sizes and base options
+svg
+	--sz: #{rem(24px)}
+	--w: var(--sz)
+	--h: var(--sz)
 	position: relative
-	&::before
-		content: ''
-		position: absolute
-		bottom: 0
-		right: 0
-		width: 0
-		height: 0
-		border-bottom: rem(1px) solid
-		transition: width .25s
-	&.active,
-	&:hover
-		&::before
-			left: 0
-			width: 100%
-
-
-
-// Toggle work status
-$bem: '.work-status'
-.work-status
-	font-size: rem(14px)
-	color: var(--bs-gray-600)
-	& #{$bem}--online
-		color: green
+	width: var(--w)
+	height: var(--h)
+	&.icon
+		&-16
+			--sz: #{rem(16px)}
+		&-18
+			--sz: #{rem(18px)}
+		&-22
+			--sz: #{rem(22px)}
+		&-24
+			--sz: #{rem(24px)}

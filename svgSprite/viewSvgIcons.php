@@ -61,7 +61,7 @@ function viewIcons()
 {
 	// В якій папці будемо шукати іконки
 	$dataDir = 'feather/';
-	$dataDir = 'icons/';
+	// $dataDir = 'icons/';
 
 	// Відбираємо з папки всю графіку
 	if($dataArray = dirToArray($dataDir))

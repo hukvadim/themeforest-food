@@ -24,9 +24,9 @@
 	<button type="button" class="btn btn-primary btn-sm">Primary</button>
 	<button type="button" class="btn btn-primary">Primary</button>
 	<button type="button" class="btn btn-primary btn-lg">Primary</button>
-	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-18 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-22 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
 
 	<br><br>
 	<button type="button" class="btn btn-shadow btn-sm">Детальніше про доставку</button>
@@ -43,7 +43,6 @@
 	<button type="button" class="btn btn-dark">Dark</button>
 	<button type="button" class="btn btn-link">Link</button>
 	<button type="button" class="btn btn-shadow ">Детальніше про доставку</button>
-	<a href="#">More</a>
 
 	<br><br>
 
@@ -56,25 +55,151 @@
 	<button type="button" class="btn btn-outline-light">Light</button>
 	<button type="button" class="btn btn-outline-dark">Dark</button>
 
+	<br><br>
+
+	<a href="#">More</a>
+	<a href="#" class="link-mark">More</a>
+
 
 	<br><br><br><br>
 	<h1>Forms</h1>
-	<form style="max-width: 300px;">
-		<div class="mb-3">
-			<label for="exampleInputEmail1" class="form-label">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1">
-			<div class="form-text">We'll never share your email with anyone else.</div>
+	<form class="needs-validation" novalidate>
+		<div style="max-width: 400px;">
+			<div class="mb-3">
+				<div class="my-form-wrap">
+					<label for="validationCustomUsername" class="form-label">Username</label>
+					<div class="input-group has-validation">
+						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
+						<div class="invalid-feedback">Please choose a username.</div>
+						<div class="valid-feedback">Looks good!</div>
+					</div>
+				</div>
+				<div class="col-md-4 position-relative">
+					<label for="validationTooltip01" class="form-label">First name</label>
+					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
+					<div class="valid-tooltip">Looks good!</div>
+					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="input-message-1" class="form-label">Send message</label>
+				<textarea class="form-control" id="input-message-1" rows="3"></textarea>
+			</div>
+			<div class="mb-3">
+				<input class="form-control mb-3 form-control-lg" type="text" placeholder="Email">
+				<input class="form-control mb-3" type="text" placeholder="Email">
+				<input class="form-control mb-3 form-control-sm" type="text" placeholder="Email">
+				<input class="form-control mb-3" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+				<input class="form-control mb-3" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+			</div>
+			<div class="mb-3">
+				<select class="form-select">
+					<option selected>Open this select</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+			<div class="mb-3 form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Check me out
+				</label>
+				<br>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input">Check me out
+				</label>
+			</div>
 		</div>
-		<div class="mb-3 form-check">
-			<label class="form-check-label">
-				<input type="checkbox" class="form-check-input">Check me out
-			</label>
-			<br>
-			<label class="form-check-label">
-				<input type="radio" class="form-check-input">Check me out
-			</label>
+		<div class="mb-3">
+			<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+			<label class="btn btn-primary" for="btn-check">Check як в petsi</label>
+		</div>
+		<div class="mb-3">
+			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+			<label class="btn btn-sm btn-secondary" for="option1">Checked</label>
+
+			<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+			<label class="btn btn-sm btn-secondary" for="option2">Radio</label>
+
+			<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+			<label class="btn btn-sm btn-secondary" for="option3">Disabled</label>
+		</div>
+		<div class="mb-3">
+			<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+			<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+			<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+			<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+			<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+			<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+		</div>
+		<div class="mb-3">
+			<label for="customRange1" class="form-label">Example range</label>
+			<input type="range" class="form-range" id="customRange1">
+		</div>
+		<div class="mb-3">
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+				<label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+				<label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+				<label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+				<label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+			</div>
+		</div>
+		<div class="mb-3">
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="basic-addon1">@</span>
+				<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+				<span class="input-group-text" id="basic-addon2">@example.com</span>
+			</div>
+
+			<div class="input-group mb-3">
+				<button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+				<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+				<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Action</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="#">Separated link</a></li>
+				</ul>
+				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+			</div>
 		</div>
 
+		<div class="mb-3">
+			<div class="form-floating mb-3">
+				<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+				<label for="floatingInput">Email floating</label>
+			</div>
+		</div>
+
+		<div class="mb-3">
+			<button class="btn btn-primary" type="submit">Submit form</button>
+		</div>
 	</form>
 
 

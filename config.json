@@ -8,6 +8,7 @@
 
 	"page-social-img": "img/page-home-social.jpg",
 
+	"currency": "&dollar;",
 
 	"demo": {
 		
@@ -21,7 +22,13 @@
 		},
 
 		"img": {
-			"payment": "img/static/payments.png"
+			"info": "!!! Develop with 'img/' and then change to 'img/demo/'",
+			"path": "img",
+			"payment": "img/static/payments.png",
+			"social-gallery-img": "img/social-gallery/social-gallery-",
+			"social": {
+				"instagram": "img/icons/social-instagram.png"
+			}
 		}
 
 	},
@@ -39,20 +46,21 @@
 		"auth"        : "auth.html",
 		"news"        : "news.html",
 		"news-detail" : "news-detail.html",
+		"cart"        : "cart.html",
 
 		"terms"       : "terms.html",
 		"components"  : "components.html",
 		"404"         : "404.html"
 	},
 
-
 	"pages": {
 		"static": {
-			"page-1" : "Акції",
-			"page-2" : "Доставка і оплата",
-			"page-3" : "Зв'язатися з нами",
-			"page-4" : "Політика персональних даних",
-			"page-5" : "Угода про умови доставки"
+			"page-1": "Actions",
+			"page-2": "About us",
+			"page-3": "Delivery",
+			"page-4": "Franchising",
+			"page-5": "Vacancies",
+			"page-6": "Leave a review"
 		}
 	}
 }

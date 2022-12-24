@@ -1,9 +1,32 @@
+// Single page details
+.page-title
+	margin: 0
+	font-weight: 700
+
+.page-content
+	margin-top: rem(70px)
+	margin-bottom: rem(90px)
+	&--single-page
+		padding: rem(30px)
+		background-color: var(--bs-gray-100)
+		border-radius: var(--bs-border-radius-lg)
+	&-hold
+		margin-top: rem(50px)
+		.container
+			&--single-page
+				max-width: 960px
+
+
+
+// Typography all html elements
 .typography
+	line-height: var(--body-line-height)
 
 	h1, h2, h3, h4, h5, h6,
 	.h1, .h2, .h3, .h4, .h5, .h6
 		margin-bottom: rem(18px)
 		font-weight: 600
+
 	h1, h2, h3, h4
 		margin-top: rem(40px)
 		&:first-child

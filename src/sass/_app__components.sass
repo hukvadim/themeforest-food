@@ -1,21 +1,233 @@
+// All small boxes have one title
+.box-title
+	--fs: #{rem(14px)}
+	--fw: 600
+	--tt: uppercase
+	--ls: #{rem(1px)}
+	--m : 0 0 #{rem(16px)}
+	color: var(--bs-gray)
+	font-size: var(--fs)
+	font-weight: var(--fw)
+	text-transform: var(--tt)
+	letter-spacing: var(--ls)
+	margin: var(--m)
+
+
+
+// Title versions
 .title-square
 	text-align: center
 	position: relative
+	padding-top: rem(85px)
+	min-height: rem(176px)
 	&::before,
 	&::after
 		content: ''
+		z-index: 0
 		position: absolute
 		top: 0
 		left: 50%
-		transform: translate(-50%, -50%)
+		transform: translate(-50%, 0)
 	&::before
+		top: rem(26px)
+		width: rem(94px)
+		height: rem(150px)
+		border: rem(5px) solid var(--bs-gray-200)
+		border-radius: var(--bs-border-radius-lg)
 	&::after
+		z-index: 1
+		width: rem(3px)
+		height: rem(60px)
+		background-color: var(--bs-yellow)
+	& > *
+		z-index: 5
+		position: relative
 	& &__small
 		font-size: rem(15px)
 		color: var(--bs-gray)
 		display: block
-		margin-bottom: rem(8px)
 	& &__main
 		font-size: rem(30px)
 		text-transform: uppercase
 		font-weight: 700
+
+
+
+
+// Nav versions
+.nav--list
+	&-links
+		flex-direction: column
+		.nav-link
+			--bs-nav-link-font-size: #{rem(14px)}
+			--bs-nav-link-font-weight: 600
+			--bs-nav-link-padding-y: #{rem(2px)}
+			--bs-nav-link-padding-x: 0
+			margin: rem(5px) 0
+			display: inline-block
+
+
+
+
+// Logo versions
+$bem: '.logo-img'
+.logo-img
+	--max-w: #{$logo-size}
+	width: 100%
+	max-width: $logo-size
+	opacity: 1
+	transition: .25s
+	&-hold
+		display: inline-block
+		position: relative
+		#{$bem}
+			&--black
+			&--white
+				position: absolute
+				top: 0
+				left: 0
+				opacity: 0
+	&--sm
+		max-width: #{$logo-size-sm}
+
+
+
+// Price versions width old price
+.price
+	font-size: rem(18px)
+	font-weight: 500
+	line-height: 1.3
+	& &-currency
+		font-size: 75%
+		padding-left: rem(2px)
+	& &-old
+		position: relative
+		font-size: 75%
+		display: inline-block
+		text-align: right
+		color: var(--bs-gray-500)
+		&--red
+			color: var(--color-old-price)
+		&:first-child
+			margin-right: rem(7px)
+		&:last-child
+			margin-left: rem(7px)
+		&::before
+			content: ''
+			position: absolute
+			border-bottom: rem(1px) solid
+			top: 52%
+			left: -10%
+			width: 118%
+			// opacity: .75
+			transform: rotate(13deg)
+
+
+
+// Nice link hover with border
+.typography a,
+.link-mark
+	--mark-height: #{rem(8px)}
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		bottom: rem(3px)
+		right: 0
+		width: 100%
+		height: 0
+		opacity: .14
+		border-bottom: var(--mark-height) solid
+		transition: opacity .25s
+		z-index: 0
+	&:hover
+		&::after
+			opacity: 0
+
+.typography a,
+.link-hover
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 0
+		height: 0
+		border-bottom: rem(1px) solid
+		transition: width .25s
+	&.active,
+	&:hover
+		&::before
+			left: 0
+			width: 100%
+
+.typography a
+	&::before
+		bottom: rem(1px)
+
+
+
+// Simple hidden and visible animate
+$bem: '.hover-visible'
+.hover-visible
+	&,
+	&-hold #{$bem}-el
+		z-index: 2
+		transition: .25s
+		visibility: hidden
+		opacity: 0
+	&:hover,
+	&-hold:hover #{$bem}-el
+		visibility: visible
+		opacity: 1
+
+
+
+
+// Toggle work status
+$bem: '.work-status'
+.work-status
+	font-size: rem(14px)
+	color: var(--bs-gray-600)
+	& #{$bem}--online
+		color: green
+
+
+
+
+// Photo gallery from instagram
+$bem: '.social-gallery'
+.social-gallery
+	& &__title
+		margin-bottom: rem(65px)
+	& &__hash
+		margin-bottom: rem(55px)
+		&-tag
+			&-img
+				&-hold
+			&-text
+	& &__hold
+
+	& &__item
+		position: relative
+		padding: rem(25px) rem(15px)
+		&,
+		&-hover-box,
+		&-img
+			border-radius: var(--bs-border-radius)
+		&-hover-box
+			--bs-bg-opacity: .9
+		&-hash-tag
+		&-img
+			position: relative
+			box-shadow: 0 rem(6px) rem(18px) 0 rgba(0, 0, 0, 0.1), 0 rem(2px) rem(6px) 0 rgba(0, 0, 0, 0.14)
+			width: 100%
+			height: auto
+		&-link
+			display: block
+			&:hover
+				#{$bem}__item-img
+					box-shadow: 0 rem(6px) rem(20px) 0 rgba(0, 0, 0, 0.25), 0 rem(3px) rem(6px) 0 rgba(0, 0, 0, 0.24)
+	
+

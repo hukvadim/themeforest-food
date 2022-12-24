@@ -2,10 +2,11 @@
 	--nav-size:          #{rem($nav-size)}
 	--sidebar-size:      #{rem($sidebar-size)}
 	--sidebar-cart-size: #{rem($sidebar-cart-size)}
-	--icon-padding:      #{rem($icon-padding)}
-	--border-radius: 8px;
-	--border-radius-big: 12px;
-	--border-radius-mini: 4px;
+	--icon-margin:       #{rem($icon-margin)}
+	--icon-margin-md:    #{rem($icon-margin + 4)}
+	--icon-margin-lg:    #{rem($icon-margin + 8)}
+	--body-line-height:  1.7
+	--color-old-price:   #f98080
 
 html,
 body.sticky-footer
@@ -24,18 +25,20 @@ body
 
 a
 	position: relative
+	display: inline-block
 	transition: .25s
+a, .cur-p
+	cursor: pointer
 
-svg
-	--sz: 1.5rem 
-	--w: var(--sz)
-	--h: var(--sz)
-	position: relative
-	width: var(--w)
-	height: var(--h)
+select
+	cursor: pointer
 
-.icon-padding
-	padding-right: var(--icon-padding)
+.icon-margin
+	margin-right: var(--icon-margin)
+	&-md
+		margin-right: var(--icon-margin-md)
+	&-lg
+		margin-right: var(--icon-margin-lg)
 
 .ff-num
 	// font-family: 'Rubik', sans-serif // Old version

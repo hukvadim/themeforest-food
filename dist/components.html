@@ -55,23 +55,43 @@
 			<a class="nav-base__btn-menu btn btn-line-text js-call-sidebar" href="#">
 				<span class="nav-base__btn-menu-text btn-line-text__span">Menu</span>
 			</a>
+			<div class="nav-base__box nav-base__box-phone">
+				
+				<div class="nav-base__box-phone-top d-flex-center-y">
+					<a href="tel:+380932121495" class="nav-base__box-phone-link link-hover">+38 (093) 21 21 495</a>
+					<span class="nav-base__box-work-hours fs-12 d-flex-inline-center-y"><svg class="icon icon-clock icon-margin icon-16"><use xlink:href="#icon-clock"></use></svg>Пн-Нд:  10.00 – 17.00</span>
+				</div>
+				
+				<div class="nav-base__box-phone-bottom">
+					<div class="dropdown town-switch">
+						<div class="dropdown-toggle cur-p" data-bs-toggle="dropdown">New York</div>
+						<ul class="dropdown-menu dropdown-menu-md-end dropdown-menu-lg-start">
+							<li><a class="dropdown-item active" href="#">English</a></li>
+							<li><a class="dropdown-item active?>" href="#">Français</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="nav-base__logo-hold d-flex-center">
 			<a href="index.html" class="nav-base__logo-link logo-img-hold toggle-sidebar-item">
-				<img src="img/logo-dark.png" alt="" class="nav-base__logo logo-img logo-img--black">
-				<img src="img/logo-white.png" alt="" class="nav-base__logo logo-img logo-img--white">
+				<img src="img/logo-dark.png" alt="Logo" class="nav-base__logo logo-img logo-img--black">
+				<img src="img/logo-white.png" alt="Logo" class="nav-base__logo logo-img logo-img--white">
 			</a>
 		</div>
 
 		<div class="nav-base__right">
-			<a href="#" class="nav-base__btn btn toggle-sidebar-item">
-				<svg class="icon icon-heart"><use xlink:href="#icon-heart"></use></svg>
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item hidden-md-up">
+				<svg class="icon icon-24 icon-phone"><use xlink:href="#icon-phone"></use></svg>
 			</a>
-			<a href="#" class="nav-base__btn btn toggle-sidebar-item">
-				<svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item">
+				<svg class="icon icon-24 icon-heart"><use xlink:href="#icon-heart"></use></svg>
 			</a>
-			<a href="#" class="nav-base__cart nav-base__btn btn d-flex-center">
-				<svg class="icon icon-shopping-bag"><use xlink:href="#icon-shopping-bag"></use></svg>
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item">
+				<svg class="icon icon-24 icon-user"><use xlink:href="#icon-user"></use></svg>
+			</a>
+			<a href="cart.html" class="nav-base__cart nav-base__btn btn btn-nav-cart toggle-sidebar-item d-flex-center">
+				<svg class="icon icon-24 icon-shopping-bag"><use xlink:href="#icon-shopping-bag"></use></svg>
 				<span class="nav-base__cart-label">Your order</span>
 			</a>
 		</div>
@@ -89,13 +109,13 @@
 					<h1 class="gallery-full__slide-title fs-title-1">Are you ready <span class="d-flex fw-700">lead the way</span></h1>
 					<p class="gallery-full__slide-desk fs-text-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero obcaecati aperiam dignissimos temporibus error laborum, et vel sit ab, quos!</p>
 					<div class="gallery-full__slide-btn-hold">
-						<a href="#" class="gallery-full__slide-btn btn btn-lg btn-outline-dark">
-							<span class="btn-text">Discover</span>
-							<svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
+						<a href="#" class="gallery-full__slide-btn btn btn-lg btn-dark">
+							<span class="btn-text fs-16">Discover</span>
+							<svg class="icon icon-16 offset-t-none icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
 						</a>
 						<a href="#" class="gallery-full__slide-btn btn">
 							<span class="btn-text">Discover</span>
-							<svg class="icon icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
+							<svg class="icon icon-16 offset-t-none icon-chevron-right"><use xlink:href="#icon-chevron-right"></use></svg>
 						</a>
 					</div>
 				</div>
@@ -157,18 +177,23 @@
 			<img src="img/static/product-1.jpg" class="card-img" alt="">
 		</a>
 		<div class="card-img-badge-holder">
-			<span class="badge bg-danger">New</span>
+			<span class="badge bg-info">New</span>
 		</div>
 		<div class="card-img-btn-holder">
 			<a href="#" class="btn btn-primary btn-cart btn-sm">
-				<svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg>
+				<svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg>
 			</a>
 		</div>
 	</div>
 	<div class="card-body">
 		<div class="card-title-holder">
-			<a href="#" class="card-title trim-text">Кілограм (40 шт)</a>
-			<span class="price ff-num">10<span class="price-currency">usd.</span><span class="price-old">8<span class="price-currency">usd.</span></span></span> 
+			<a href="#" class="card-title trim-text">Кілограм <span class="fs-14 text-mutted">(40 шт)</span></a>
+			<span class="price ff-num">
+				<span class="price-old price-old--red">
+					<span class="price-old-num">12</span><span class="price-currency">&dollar;</span>
+				</span> 
+				<span class="price-num">24</span><span class="price-currency">&dollar;</span>
+			</span> 
 		</div>
 		<p class="card-text trim-text-3">Авокадо, норі, петрушка, креветки, вершковий сир, рис для суші, соус реліша з огірком, сир моцарелла</p>
 	</div>
@@ -179,9 +204,9 @@
 	<button type="button" class="btn btn-primary btn-sm">Primary</button>
 	<button type="button" class="btn btn-primary">Primary</button>
 	<button type="button" class="btn btn-primary btn-lg">Primary</button>
-	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-18 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-22 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
 
 	<br><br>
 	<button type="button" class="btn btn-shadow btn-sm">Детальніше про доставку</button>
@@ -198,7 +223,6 @@
 	<button type="button" class="btn btn-dark">Dark</button>
 	<button type="button" class="btn btn-link">Link</button>
 	<button type="button" class="btn btn-shadow ">Детальніше про доставку</button>
-	<a href="#">More</a>
 
 	<br><br>
 
@@ -211,25 +235,151 @@
 	<button type="button" class="btn btn-outline-light">Light</button>
 	<button type="button" class="btn btn-outline-dark">Dark</button>
 
+	<br><br>
+
+	<a href="#">More</a>
+	<a href="#" class="link-mark">More</a>
+
 
 	<br><br><br><br>
 	<h1>Forms</h1>
-	<form style="max-width: 300px;">
-		<div class="mb-3">
-			<label for="exampleInputEmail1" class="form-label">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1">
-			<div class="form-text">We'll never share your email with anyone else.</div>
+	<form class="needs-validation" novalidate>
+		<div style="max-width: 400px;">
+			<div class="mb-3">
+				<div class="my-form-wrap">
+					<label for="validationCustomUsername" class="form-label">Username</label>
+					<div class="input-group has-validation">
+						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
+						<div class="invalid-feedback">Please choose a username.</div>
+						<div class="valid-feedback">Looks good!</div>
+					</div>
+				</div>
+				<div class="col-md-4 position-relative">
+					<label for="validationTooltip01" class="form-label">First name</label>
+					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
+					<div class="valid-tooltip">Looks good!</div>
+					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
+				</div>
+			</div>
+			<div class="mb-3">
+				<label for="input-message-1" class="form-label">Send message</label>
+				<textarea class="form-control" id="input-message-1" rows="3"></textarea>
+			</div>
+			<div class="mb-3">
+				<input class="form-control mb-3 form-control-lg" type="text" placeholder="Email">
+				<input class="form-control mb-3" type="text" placeholder="Email">
+				<input class="form-control mb-3 form-control-sm" type="text" placeholder="Email">
+				<input class="form-control mb-3" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+				<input class="form-control mb-3" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
+			</div>
+			<div class="mb-3">
+				<select class="form-select">
+					<option selected>Open this select</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+			<div class="mb-3 form-check">
+				<label class="form-check-label">
+					<input type="checkbox" class="form-check-input">Check me out
+				</label>
+				<br>
+				<label class="form-check-label">
+					<input type="radio" class="form-check-input">Check me out
+				</label>
+			</div>
 		</div>
-		<div class="mb-3 form-check">
-			<label class="form-check-label">
-				<input type="checkbox" class="form-check-input">Check me out
-			</label>
-			<br>
-			<label class="form-check-label">
-				<input type="radio" class="form-check-input">Check me out
-			</label>
+		<div class="mb-3">
+			<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+			<label class="btn btn-primary" for="btn-check">Check як в petsi</label>
+		</div>
+		<div class="mb-3">
+			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+			<label class="btn btn-sm btn-secondary" for="option1">Checked</label>
+
+			<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+			<label class="btn btn-sm btn-secondary" for="option2">Radio</label>
+
+			<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+			<label class="btn btn-sm btn-secondary" for="option3">Disabled</label>
+		</div>
+		<div class="mb-3">
+			<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+			<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+			<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+			<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+			<input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+			<label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+		</div>
+		<div class="mb-3">
+			<label for="customRange1" class="form-label">Example range</label>
+			<input type="range" class="form-range" id="customRange1">
+		</div>
+		<div class="mb-3">
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+				<label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+				<label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+				<label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+			</div>
+			<div class="form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+				<label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+			</div>
+		</div>
+		<div class="mb-3">
+			<div class="input-group mb-3">
+				<span class="input-group-text" id="basic-addon1">@</span>
+				<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+				<span class="input-group-text" id="basic-addon2">@example.com</span>
+			</div>
+
+			<div class="input-group mb-3">
+				<button class="btn btn-outline-secondary" type="button" id="button-addon1">Button</button>
+				<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+			</div>
+
+			<div class="input-group mb-3">
+				<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="#">Action</a></li>
+					<li><a class="dropdown-item" href="#">Another action</a></li>
+					<li><a class="dropdown-item" href="#">Something else here</a></li>
+					<li>
+						<hr class="dropdown-divider">
+					</li>
+					<li><a class="dropdown-item" href="#">Separated link</a></li>
+				</ul>
+				<input type="text" class="form-control" aria-label="Text input with dropdown button">
+			</div>
 		</div>
 
+		<div class="mb-3">
+			<div class="form-floating mb-3">
+				<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+				<label for="floatingInput">Email floating</label>
+			</div>
+		</div>
+
+		<div class="mb-3">
+			<button class="btn btn-primary" type="submit">Submit form</button>
+		</div>
 	</form>
 
 
@@ -238,37 +388,32 @@
 
 	<footer class="footer">
 	<div class="footer__wrapper">
-
-
 		<div class="footer__top">
 			<div class="container">
 				<div class="footer__top-hold row">
-					<div class="footer__top-box footer__category box-hold col-md-4">
+					<div class="footer__top-box footer__category divider-box col-md-4">
 						<h3 class="footer__category-title box-title">About Olivia</h3>
-						<ul class="footer__category-list nav flex-column">
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Акції</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Доставка і оплата</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Зв'язатися з нами</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Home</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Features</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">Pricing</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">FAQs</a></li>
-							<li class="nav-item"><a href="#" class="nav-link link-hover">About</a></li>
+						<ul class="footer__category-list nav nav--list-links">
+							<li class="nav-item"><a href="#" class="nav-link link-hover">Actions</a></li>
+							<li class="nav-item"><a href="#" class="nav-link link-hover">Delivery and payment</a></li>
+							<li class="nav-item"><a href="#" class="nav-link link-hover">Franchise</a></li>
+							<li class="nav-item"><a href="#" class="nav-link link-hover">Points program</a></li>
+							<li class="nav-item"><a href="#" class="nav-link link-hover">Contact us</a></li>
 						</ul>
 					</div>
-					<div class="footer__top-box footer__order box-hold col-md-4">
-						<h3 class="footer__order-title box-title">Зробити замовлення</h3>
+					<div class="footer__top-box footer__order divider-box col-md-4">
+						<h3 class="footer__order-title box-title">Make an order</h3>
 						<div class="footer__order-content">
 							<a href="tel:+380932121495" class="footer__order-main-tel link-hover">+38 (093) 21 21 495</a>
 							<p class="footer__order-work-hours">Пн-Нд:  10.00 – 17.00</p>
 							<p class="footer__order-work-status work-status work-status--online">Працюємо зараз</p>
 						</div>
 					</div>
-					<div class="footer__top-box footer__contacts box-hold col-md-4">
-						<h3 class="footer__contacts-title box-title">Слідкуйте за нами</h3>
+					<div class="footer__top-box footer__contacts divider-box col-md-4">
+						<h3 class="footer__contacts-title box-title">Follow us</h3>
 						<div class="footer__contacts-content">
-							<a href="#" class="contact-big-link link-hover">#TwitterFood</a>
-							<p class="contact-text text-muted">Відгуки наших клієнтів по цьому хештегу в twitter</p>
+							<a href="#" class="contact-big-link link-hover mb-2 text-uppercase fw-600">#Twitter-it</a>
+							<p class="contact-text text-muted">Reviews of our customers on this hashtag on twitter</p>
 						</div>
 					</div>
 				</div>
@@ -283,11 +428,14 @@
 					</div>
 
 					<div class="footer__bottom-box footer__bottom-center">
-						<img src="img/static/payments.png" alt="" class="footer__bottom-img d-block">
+						<img src="img/static/payments.png" alt="payment" width="252" height="20" class="footer__bottom-img d-block">
 					</div>
 
 					<div class="footer__bottom-box footer__bottom-right">
-						<a href="https://themeforest.net/" class="footer__bottom-dev footer__text-el link-hover">Olivia theme</a>
+						<nav class="nav nav-margin">
+							<a href="terms.html" class="nav-link footer__text-el link-hover">Privacy policy</a>
+							<a href="terms.html" class="nav-link footer__text-el link-hover">Terms of use</a>
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -302,38 +450,38 @@
 				<ul class="sidebar-menu__category-list list-unstyled">
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-coffee"></use></svg>
-							<span class="link-text">Піца</span>
+							<img src="img/icons/pizza-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Pizza</span>
 						</a>
 					</li>
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-mic"></use></svg>
-							<span class="link-text">Суші</span>
+							<img src="img/icons/sushi-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Sushi</span>
 						</a>
 					</li>
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-gitlab"></use></svg>
-							<span class="link-text">Сети</span>
+							<img src="img/icons/platters-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Platters</span>
 						</a>
 					</li>
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-gift"></use></svg>
-							<span class="link-text">Салати</span>
+							<img src="img/icons/salad-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Salads</span>
 						</a>
 					</li>
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-umbrella"></use></svg>
-							<span class="link-text">Фрі меню</span>
+							<img src="img/icons/dessert-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Dessert</span>
 						</a>
 					</li>
 					<li class="sidebar-menu__category-li">
 						<a href="catalog.html" class="sidebar-menu__category-link">
-							<svg class="icon icon-padding icon-coffee"><use xlink:href="#icon-zap"></use></svg>
-							<span class="link-text">Напої</span>
+							<img src="img/icons/drink-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+							<span class="link-text">Drinks</span>
 						</a>
 					</li>
 				</ul>

@@ -124,7 +124,7 @@ gulp.task('sassMin', function() {
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.on('error', sass.logError)
-		.pipe(cleanCSS({compatibility: 'ie9'}))
+		// .pipe(cleanCSS({compatibility: 'ie9'}))
 		.pipe(autoprefixer({cascade: false}))
 		.pipe(rename(base.fileCssMin))
 		.pipe(sourcemaps.write('.'))
