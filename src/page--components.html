@@ -17,7 +17,11 @@
 
 <div class="container-fluid">
 
-	@@include('block--card-product.html')
+	<div class="d-flex">
+		@@include('block--card-product.html')
+		<div style="width: 30px;"></div>
+		@@include('block--card-product.html', {"cartAdded": "3", "cssClass": "card-product--dark"})
+	</div>
 
 	<br><br>
 	<h1>Buttons</h1>
@@ -66,22 +70,6 @@
 	<form class="needs-validation" novalidate>
 		<div style="max-width: 400px;">
 			<div class="mb-3">
-				<div class="my-form-wrap">
-					<label for="validationCustomUsername" class="form-label">Username</label>
-					<div class="input-group has-validation">
-						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
-						<div class="invalid-feedback">Please choose a username.</div>
-						<div class="valid-feedback">Looks good!</div>
-					</div>
-				</div>
-				<div class="col-md-4 position-relative">
-					<label for="validationTooltip01" class="form-label">First name</label>
-					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
-					<div class="valid-tooltip">Looks good!</div>
-					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
-				</div>
-			</div>
-			<div class="mb-3">
 				<label for="input-message-1" class="form-label">Send message</label>
 				<textarea class="form-control" id="input-message-1" rows="3"></textarea>
 			</div>
@@ -109,12 +97,27 @@
 					<input type="radio" class="form-check-input">Check me out
 				</label>
 			</div>
+			<div class="mb-3">
+				<div class="my-form-wrap">
+					<label for="validationCustomUsername" class="form-label">Username</label>
+					<div class="input-group has-validation">
+						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
+						<div class="invalid-feedback">Please choose a username.</div>
+						<div class="valid-feedback">Looks good!</div>
+					</div>
+				</div>
+				<div class="mb-3 mt-2 position-relative">
+					<label for="validationTooltip01" class="form-label">First name</label>
+					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
+					<div class="valid-tooltip">Looks good!</div>
+					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
+				</div>
+			</div>
 		</div>
 		<div class="mb-3">
 			<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 			<label class="btn btn-primary" for="btn-check">Check як в petsi</label>
-		</div>
-		<div class="mb-3">
+
 			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
 			<label class="btn btn-sm btn-secondary" for="option1">Checked</label>
 
@@ -126,10 +129,10 @@
 		</div>
 		<div class="mb-3">
 			<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label>
 
 			<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
-			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label>
 
 			<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
 			<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
@@ -201,6 +204,23 @@
 			<button class="btn btn-primary" type="submit">Submit form</button>
 		</div>
 	</form>
+
+	<div class="mb-3">
+		<span class="badge text-bg-primary">Primary</span>
+		<span class="badge text-bg-secondary">Secondary</span>
+		<span class="badge text-bg-success">Success</span>
+		<span class="badge text-bg-danger">Danger</span>
+		<span class="badge text-bg-warning">Warning</span>
+		<span class="badge text-bg-info">Info</span>
+		<span class="badge text-bg-light">Light</span>
+		<span class="badge text-bg-dark">Dark</span>
+		<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+		<h2>Example heading <span class="badge bg-secondary">New</span></h2>
+		<h3>Example heading <span class="badge bg-secondary">New</span></h3>
+		<h4>Example heading <span class="badge bg-secondary">New</span></h4>
+		<h5>Example heading <span class="badge bg-secondary">New</span></h5>
+		<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+	</div>
 
 
 </div>

@@ -100,7 +100,7 @@
 
 
 
-<div class="gallery-full">
+<div class="gallery-full gallery-slick-inherit position-relative">
 	<div class="container-fluid container-fluid-max">
 		<div class="gallery-full__wrapper js-gallery-single-img">
 			
@@ -171,13 +171,17 @@
 
 <div class="container-fluid">
 
-	<div class="card card-product" style="width: 320px;">
+	<div class="d-flex">
+		<div class="card card-product hover-scale-hold" style="width: 320px;">
 	<div class="card-img-hold">
 		<a href="#" class="card-img-link">
-			<img src="img/static/product-1.jpg" class="card-img" alt="">
+			<img src="img/static/product-1.jpg" class="card-img hover-scale" alt="">
 		</a>
-		<div class="card-img-badge-holder">
+		<div class="card-img-badge-holder card-img-badge-holder-left">
 			<span class="badge bg-info">New</span>
+		</div>
+		<div class="card-img-badge-holder card-img-badge-holder-right">
+			
 		</div>
 		<div class="card-img-btn-holder">
 			<a href="#" class="btn btn-primary btn-cart btn-sm">
@@ -198,6 +202,42 @@
 		<p class="card-text trim-text-3">Авокадо, норі, петрушка, креветки, вершковий сир, рис для суші, соус реліша з огірком, сир моцарелла</p>
 	</div>
 </div>
+		<div style="width: 30px;"></div>
+		<div class="card card-product hover-scale-hold card-product--dark" style="width: 320px;">
+	<div class="card-img-hold">
+		<a href="#" class="card-img-link">
+			<img src="img/static/product-1.jpg" class="card-img hover-scale" alt="">
+		</a>
+		<div class="card-img-badge-holder card-img-badge-holder-left">
+			<span class="badge bg-info">New</span>
+		</div>
+		<div class="card-img-badge-holder card-img-badge-holder-right">
+			
+			<span class="badge bg-secondary text-light badge-product-added d-flex-center-y" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Added to cart">
+				<svg class="icon icon-18 icon-cart-bag icon-margin"><use xlink:href="#icon-cart-bag"></use></svg><span class="num-added-cart ff-num">3</span>
+			</span>
+			
+		</div>
+		<div class="card-img-btn-holder">
+			<a href="#" class="btn btn-primary btn-cart btn-sm">
+				<svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg>
+			</a>
+		</div>
+	</div>
+	<div class="card-body">
+		<div class="card-title-holder">
+			<a href="#" class="card-title trim-text">Кілограм <span class="fs-14 text-mutted">(40 шт)</span></a>
+			<span class="price ff-num">
+				<span class="price-old price-old--red">
+					<span class="price-old-num">12</span><span class="price-currency">&dollar;</span>
+				</span> 
+				<span class="price-num">24</span><span class="price-currency">&dollar;</span>
+			</span> 
+		</div>
+		<p class="card-text trim-text-3">Авокадо, норі, петрушка, креветки, вершковий сир, рис для суші, соус реліша з огірком, сир моцарелла</p>
+	</div>
+</div>
+	</div>
 
 	<br><br>
 	<h1>Buttons</h1>
@@ -246,22 +286,6 @@
 	<form class="needs-validation" novalidate>
 		<div style="max-width: 400px;">
 			<div class="mb-3">
-				<div class="my-form-wrap">
-					<label for="validationCustomUsername" class="form-label">Username</label>
-					<div class="input-group has-validation">
-						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
-						<div class="invalid-feedback">Please choose a username.</div>
-						<div class="valid-feedback">Looks good!</div>
-					</div>
-				</div>
-				<div class="col-md-4 position-relative">
-					<label for="validationTooltip01" class="form-label">First name</label>
-					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
-					<div class="valid-tooltip">Looks good!</div>
-					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
-				</div>
-			</div>
-			<div class="mb-3">
 				<label for="input-message-1" class="form-label">Send message</label>
 				<textarea class="form-control" id="input-message-1" rows="3"></textarea>
 			</div>
@@ -289,12 +313,27 @@
 					<input type="radio" class="form-check-input">Check me out
 				</label>
 			</div>
+			<div class="mb-3">
+				<div class="my-form-wrap">
+					<label for="validationCustomUsername" class="form-label">Username</label>
+					<div class="input-group has-validation">
+						<input type="text" class="form-control" id="validationCustomUsername" name="testemail" aria-describedby="inputGroupPrepend" required>
+						<div class="invalid-feedback">Please choose a username.</div>
+						<div class="valid-feedback">Looks good!</div>
+					</div>
+				</div>
+				<div class="mb-3 mt-2 position-relative">
+					<label for="validationTooltip01" class="form-label">First name</label>
+					<input type="text" name="testname" class="form-control" id="validationTooltip01" value="Mark" required>
+					<div class="valid-tooltip">Looks good!</div>
+					<div class="invalid-tooltip">Please choose a unique and valid username.</div>
+				</div>
+			</div>
 		</div>
 		<div class="mb-3">
 			<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
 			<label class="btn btn-primary" for="btn-check">Check як в petsi</label>
-		</div>
-		<div class="mb-3">
+
 			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
 			<label class="btn btn-sm btn-secondary" for="option1">Checked</label>
 
@@ -306,10 +345,10 @@
 		</div>
 		<div class="mb-3">
 			<input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+			<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label>
 
 			<input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
-			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+			<label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label>
 
 			<input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
 			<label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
@@ -381,6 +420,23 @@
 			<button class="btn btn-primary" type="submit">Submit form</button>
 		</div>
 	</form>
+
+	<div class="mb-3">
+		<span class="badge text-bg-primary">Primary</span>
+		<span class="badge text-bg-secondary">Secondary</span>
+		<span class="badge text-bg-success">Success</span>
+		<span class="badge text-bg-danger">Danger</span>
+		<span class="badge text-bg-warning">Warning</span>
+		<span class="badge text-bg-info">Info</span>
+		<span class="badge text-bg-light">Light</span>
+		<span class="badge text-bg-dark">Dark</span>
+		<h1>Example heading <span class="badge bg-secondary">New</span></h1>
+		<h2>Example heading <span class="badge bg-secondary">New</span></h2>
+		<h3>Example heading <span class="badge bg-secondary">New</span></h3>
+		<h4>Example heading <span class="badge bg-secondary">New</span></h4>
+		<h5>Example heading <span class="badge bg-secondary">New</span></h5>
+		<h6>Example heading <span class="badge bg-secondary">New</span></h6>
+	</div>
 
 
 </div>
@@ -498,7 +554,7 @@
 		<symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 			<circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
 		</symbol>
-		<symbol id="icon-cart-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<symbol id="icon-cart-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
 			<path d="M6.08,7.63l.1-1.79a4.61,4.61,0,0,1,2.52-4A6.81,6.81,0,0,1,12,1a7.28,7.28,0,0,1,2.35.38,4.84,4.84,0,0,1,3.47,4.48l.11,1.7"/><path d="M16.25,23H7.77a5.34,5.34,0,0,1-5.22-4.21L1.47,13.73A4.38,4.38,0,0,1,5.76,8.42H18.23a4.4,4.4,0,0,1,4.3,5.32l-1.08,5A5.31,5.31,0,0,1,16.25,23Z"/><line x1="16.99" y1="13.13" x2="17" y2="13.13" stroke-width="2.5"/><line x1="7.14" y1="13.13" x2="7.15" y2="13.13" stroke-width="2.5"/>
 		</symbol>
 

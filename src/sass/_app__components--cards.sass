@@ -1,5 +1,8 @@
+$bem: '.card-product'
 .card.card-product
+	--padding-card-body: #{rem(16px)}
 	border: none
+	border-radius: var(--bs-border-radius)
 	.card-img-hold
 		position: relative
 	.card-img
@@ -8,17 +11,24 @@
 		max-width: rem(320px)
 	.card-img-hold
 	.card-img-badge-holder
+		--badge-side-spacing: #{rem(10px)}
 		position: absolute
 		display: flex
 		flex-wrap: wrap
-		top: rem(10px)
-		left: rem(10px)
-		margin: -rem(2px)
+		top: var(--badge-side-spacing)
+		left: var(--badge-side-spacing)
+		margin: rem(-2px)
 		max-width: 100%
+		font-size: rem(14px)
 		.badge
 			margin: rem(2px)
+			cursor: default
+		&-left
+		&-right
+			left: inherit
+			right: var(--badge-side-spacing)
 	.card-body
-		padding: rem(16px) 0 0
+		padding: var(--padding-card-body) 0 0
 	.card-title-holder
 		display: flex
 		justify-content: space-between
@@ -40,3 +50,12 @@
 		position: absolute
 		right: rem(12px)
 		bottom: rem(12px)
+	&--dark
+		background-color: #{tint-color($gray-900, 2%)}
+		color: var(--bs-white)
+		.card-body
+			padding: var(--padding-card-body)
+		.card-title
+			color: var(--bs-white)
+		.card-text
+			color: var(--bs-gray-500)

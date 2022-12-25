@@ -11,12 +11,13 @@ $bem: '.btn'
 	display: inline-flex
 	justify-content: center
 	align-items: center
-	svg.icon
-		top: 0.0625rem
-		&:first-child
-			margin-right: var(--icon-margin)
-		&:last-child
-			margin-left: var(--icon-margin)
+	&.btn-with-icon
+		svg.icon
+			top: 0.0625rem
+			&:first-child
+				margin-right: var(--icon-margin)
+			&:last-child
+				margin-left: var(--icon-margin)
 	&.btn-line-text
 		--bs-btn-border-width: 0
 		--bs-btn-border-radius: 0
@@ -64,6 +65,9 @@ $bem: '.btn'
 			&::after
 				width: rem(19px)
 				top: rem(8px)
+	&.btn-icon
+		--bs-btn-padding-y: #{rem(18px)}
+		--bs-btn-padding-x: #{rem(18px)}
 	&.btn-cart
 		--bs-btn-padding-x: #{rem(11px)}
 		--bs-btn-padding-y: #{rem(11px)}

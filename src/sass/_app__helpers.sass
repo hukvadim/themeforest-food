@@ -8,6 +8,12 @@ $fsList: 10 12 14 16 18
 @each $fontSize in $fsList
 	.fs-#{$fontSize}
 		font-size: #{remNum($fontSize)}
+
+// For some reason there are no z-index classes
+$zIndexList: (n1: -1, 0: 0, 1: 1, 2: 2, 3: 3)
+@each $zIndexEl, $zIndexVal in $zIndexList
+	.z-#{$zIndexEl}
+		z-index: $zIndexVal
 .fs
 	&-title
 		&-1 // Maximum size
@@ -15,6 +21,20 @@ $fsList: 10 12 14 16 18
 	&-text
 		&-1 // Maximum size
 			font-size: rem(20px)
+
+// Font for numbers
+.ff-num
+	font-family: 'Montserrat', sans-serif
+	font-weight: 600
+
+// Margin for icons
+.icon-margin
+	margin-right: var(--icon-margin)
+	&-md
+		margin-right: var(--icon-margin-md)
+	&-lg
+		margin-right: var(--icon-margin-lg)
+
 
 // Center elements
 .d-flex-inline-center,
@@ -39,10 +59,35 @@ $fsList: 10 12 14 16 18
 		display: inline-flex
 
 .abs-center
-	position: absolute
-	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
+	&,
+	&-y-left,
+	&-y-right,
+	&-x-left,
+	&-x-right
+		position: absolute !important
+	&,
+	&-y-left,
+	&-y-right
+		top: 50%
+	&-y
+		&-left,
+		&-right
+			transform: translateY(-50%)
+		&-left
+			left: 0
+		&-right
+			right: 0
+	&-x
+		&-left,
+		&-right
+			top: 0
+			transform: translateX(-50%)
+		&-left
+			left: 50%
+		&-right
+			right: 50%
 
 .abs-full-size
 	z-index: 1
@@ -52,6 +97,7 @@ $fsList: 10 12 14 16 18
 	width: 100%
 	height: 100%
 
+
 // Simple animation
 .transition
 	--time: 0.25s
@@ -59,6 +105,7 @@ $fsList: 10 12 14 16 18
 	--delay: 0s
 	--prop: all
 	transition: var(--time) var(--type) var(--delay) var(--prop)
+
 
 // Base margin or padding for all blocks
 .divider-blocks
@@ -68,6 +115,18 @@ $fsList: 10 12 14 16 18
 
 .divider-box
 	margin-bottom: rem(40px)
+
+
+// Position minimal offset
+.offset-t
+	&-none
+		top: 0 !important
+	&-1px
+		&-up
+			top: rem(-1px) !important
+		&-down
+			top: rem(1px) !important
+
 
 // Text limit 2 or 3 lines
 .trim-text
@@ -83,25 +142,6 @@ $fsList: 10 12 14 16 18
 		-webkit-line-clamp: 3
 		-moz-line-clamp: 3
 		line-clamp: 3
-
-
-// Gallery offset img
-.gallery-offset-frame
-	padding-right: rem(50px)
-	padding-left: rem(50px)
-	overflow: hidden
-	.slick-list
-		overflow: inherit
-
-// Position minimal offset
-.offset-t
-	&-none
-		top: 0 !important
-	&-1px
-		&-up
-			top: rem(-1px) !important
-		&-down
-			top: rem(1px) !important
 
 
 // Svg sizes and base options
@@ -121,3 +161,81 @@ svg
 			--sz: #{rem(22px)}
 		&-24
 			--sz: #{rem(24px)}
+		&-36
+			--sz: #{rem(36px)}
+
+
+
+
+// Simple hover el with scale
+$bem: '.hover-scale'
+.hover-scale
+	transition: transform .45s
+	&-hold:hover #{$bem},
+	&-el:hover
+		transform: scale(1.025) translate(0, -0.25rem)
+
+// Simple hover el with rotate
+$bem: '.hover-rotate'
+.hover-rotate
+	transition: transform .3s
+	transform: rotate(0deg)
+	&-hold:hover #{$bem},
+	&-el:hover
+		transform: rotate(2deg)
+
+// Simple hidden and visible animate
+$bem: '.hover-visible'
+.hover-visible
+	&,
+	&-hold #{$bem}-el
+		z-index: 2
+		transition: .25s
+		visibility: hidden
+		opacity: 0
+	&:hover,
+	&-hold:hover #{$bem}-el
+		visibility: visible
+		opacity: 1
+
+// Nice link hover with border
+.typography a,
+.link-mark
+	--mark-height: #{rem(8px)}
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		bottom: rem(3px)
+		right: 0
+		width: 100%
+		height: 0
+		opacity: .14
+		border-bottom: var(--mark-height) solid
+		transition: opacity .25s
+		z-index: 0
+	&:hover
+		&::after
+			opacity: 0
+
+.typography a,
+.link-hover
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 0
+		height: 0
+		border-bottom: rem(1px) solid
+		transition: width .25s
+	&.active,
+	&:hover
+		&::before
+			left: 0
+			width: 100%
+
+.typography a
+	&::before
+		bottom: rem(1px)

@@ -52,6 +52,13 @@
 		font-weight: 700
 
 
+// Toggle work status
+$bem: '.work-status'
+.work-status
+	font-size: rem(14px)
+	color: var(--bs-gray-600)
+	& #{$bem}--online
+		color: green
 
 
 // Nav versions
@@ -123,111 +130,15 @@ $bem: '.logo-img'
 			transform: rotate(13deg)
 
 
+$bem: '.badge'
+.badge
+	&#{$bem}-product-added
+		font-size: rem(15px)
+		padding: rem(10px) rem(16px)
+		.icon
+			stroke-width: 2.6
+			margin-right: rem(7px)
+		.num-added-cart
+			line-height: 1
 
-// Nice link hover with border
-.typography a,
-.link-mark
-	--mark-height: #{rem(8px)}
-	position: relative
-	&::after
-		content: ''
-		position: absolute
-		bottom: rem(3px)
-		right: 0
-		width: 100%
-		height: 0
-		opacity: .14
-		border-bottom: var(--mark-height) solid
-		transition: opacity .25s
-		z-index: 0
-	&:hover
-		&::after
-			opacity: 0
-
-.typography a,
-.link-hover
-	position: relative
-	&::before
-		content: ''
-		position: absolute
-		bottom: 0
-		right: 0
-		width: 0
-		height: 0
-		border-bottom: rem(1px) solid
-		transition: width .25s
-	&.active,
-	&:hover
-		&::before
-			left: 0
-			width: 100%
-
-.typography a
-	&::before
-		bottom: rem(1px)
-
-
-
-// Simple hidden and visible animate
-$bem: '.hover-visible'
-.hover-visible
-	&,
-	&-hold #{$bem}-el
-		z-index: 2
-		transition: .25s
-		visibility: hidden
-		opacity: 0
-	&:hover,
-	&-hold:hover #{$bem}-el
-		visibility: visible
-		opacity: 1
-
-
-
-
-// Toggle work status
-$bem: '.work-status'
-.work-status
-	font-size: rem(14px)
-	color: var(--bs-gray-600)
-	& #{$bem}--online
-		color: green
-
-
-
-
-// Photo gallery from instagram
-$bem: '.social-gallery'
-.social-gallery
-	& &__title
-		margin-bottom: rem(65px)
-	& &__hash
-		margin-bottom: rem(55px)
-		&-tag
-			&-img
-				&-hold
-			&-text
-	& &__hold
-
-	& &__item
-		position: relative
-		padding: rem(25px) rem(15px)
-		&,
-		&-hover-box,
-		&-img
-			border-radius: var(--bs-border-radius)
-		&-hover-box
-			--bs-bg-opacity: .9
-		&-hash-tag
-		&-img
-			position: relative
-			box-shadow: 0 rem(6px) rem(18px) 0 rgba(0, 0, 0, 0.1), 0 rem(2px) rem(6px) 0 rgba(0, 0, 0, 0.14)
-			width: 100%
-			height: auto
-		&-link
-			display: block
-			&:hover
-				#{$bem}__item-img
-					box-shadow: 0 rem(6px) rem(20px) 0 rgba(0, 0, 0, 0.25), 0 rem(3px) rem(6px) 0 rgba(0, 0, 0, 0.24)
-	
 

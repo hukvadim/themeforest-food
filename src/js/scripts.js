@@ -2,12 +2,18 @@
  * Base config for all plugins
  */
 const jsConfig = {
-	prevArrow: '',
-	nextArrow: '<div class="btn btn-gallery"><svg class="icon icon-arrows"><use xlink:href="#icon-arrows"></use></svg></div>',
+	prevArrow: '<div class="btn btn-light btn-icon btn-gallery btn-gallery-prev abs-center-y-left z-2"><svg class="icon icon-arrow icon-36"><use xlink:href="#icon-chevron-left"></use></svg></div>',
+	nextArrow: '<div class="btn btn-light btn-icon btn-gallery btn-gallery-next abs-center-y-right z-2"><svg class="icon icon-arrow icon-36"><use xlink:href="#icon-chevron-right"></use></svg></div>',
 }
 
 
-
+/**
+ * Tooltips
+ */
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 /**
  * Bootstrap form validation
