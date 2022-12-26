@@ -4,18 +4,26 @@
 	top: 0
 	left: 0
 	width: 100%
-	height: 100vh
+	height: 100%
 	background-color: var(--bs-gray-900)
 	display: flex
 	visibility: hidden
 	opacity: 0
+	& &__wrapper,
+	& &__content
+		display: flex
 	& &__wrapper
 		height: 100%
-		padding: rem(50px)
-		display: flex
+		flex-direction: column
+		justify-content: center
+	& &__content
 		flex-wrap: wrap
-		justify-content: space-between
 		align-items: center
+		justify-content: space-around
+		&-hold
+			width: 100%
+			height: 100%
+	& &__bottom
 	& &__category
 		&-list
 		&-li
@@ -49,14 +57,18 @@
 		visibility: visible
 		overflow-x: auto
 		opacity: 1
-	.toggle-sidebar-item
-		&.btn
-			--bs-btn-color: var(--bs-white)
-		&.btn-nav-cart
-			--bs-btn-bg: rgba(var(--bs-white-rgb), .1)
-			--bs-btn-hover-bg: rgba(var(--bs-white-rgb), .15)
+	& &-item
 		.logo-img
 			&--black
 				opacity: 0
 			&--white
 				opacity: 1
+	& &-btn
+		--bs-btn-color: var(--bs-white)
+		&.btn-nav-cart
+			--bs-btn-bg: rgba(var(--bs-white-rgb), .1)
+			--bs-btn-hover-bg: rgba(var(--bs-white-rgb), .15)
+	& &-link
+		--bs-link-color: var(--bs-white)
+	& &-text
+		color: var(--bs-white)

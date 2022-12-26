@@ -22,6 +22,10 @@ $bem: '.nav'
 	& &__right
 		display: flex
 		width: 50%
+	& &__logo,
+	& &__left,
+	& &__right
+		align-items: center
 	& &__left
 	& &__right
 		justify-content: flex-end
@@ -30,6 +34,7 @@ $bem: '.nav'
 		width: var(--nav-size)
 		height: var(--nav-size)
 		border-radius: 0 0 rem($bdrs-lg) 0
+		margin-right: rem(10px)
 	&__btn
 		--bs-btn-border-width: 0
 		--bs-btn-border-radius: 0
@@ -70,7 +75,7 @@ $bem: '.nav'
 			&-link
 				--bs-link-color: var(--bs-gray-900) // !!! ТАКИХ ПОСИЛАНЬ БУДЕ БАГАТО, ТОМУ ПРИДУМАТИ ОКРЕМИЙ КЛАС
 				font-weight: 600
-				font-size: 16px
+				font-size: 18px
 		&-work-hours
 			color: var(--bs-gray-600)
 			margin-left: rem(12px)

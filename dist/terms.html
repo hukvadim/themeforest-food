@@ -48,6 +48,7 @@
 </head>
 
 <body id="top" class="page-single nav-padding sticky-footer">
+	<noscript><div class="alert alert-danger container"><strong>Oops!</strong> You have javascript disabled! Some elements of the site may not work. We recommend enabling javascript for greater convenience</div></noscript>
 
 <header class="nav-base nav">
 	<div class="nav-base__container container-fluid px-0 d-flex">
@@ -58,13 +59,13 @@
 			<div class="nav-base__box nav-base__box-phone">
 				
 				<div class="nav-base__box-phone-top d-flex-center-y">
-					<a href="tel:+380932121495" class="nav-base__box-phone-link link-hover">+38 (093) 21 21 495</a>
-					<span class="nav-base__box-work-hours fs-12 d-flex-inline-center-y"><svg class="icon icon-clock icon-margin icon-16"><use xlink:href="#icon-clock"></use></svg>Пн-Нд:  10.00 – 17.00</span>
+					<a href="tel:+380932121495" class="nav-base__box-phone-link toggle-sidebar-link link-mark-hover">+38 (093) 21 21 495</a>
+					<span class="nav-base__box-work-hours fs-12 d-flex-inline-center-y"><svg class="icon icon-clock icon-margin icon-14"><use xlink:href="#icon-clock"></use></svg>Пн-Нд:  10.00 – 17.00</span>
 				</div>
 				
 				<div class="nav-base__box-phone-bottom">
 					<div class="dropdown town-switch">
-						<div class="dropdown-toggle cur-p" data-bs-toggle="dropdown">New York</div>
+						<span class="dropdown-toggle toggle-sidebar-text fs-14 cur-p" data-bs-toggle="dropdown">New York</span>
 						<ul class="dropdown-menu dropdown-menu-md-end dropdown-menu-lg-start">
 							<li><a class="dropdown-item active" href="#">English</a></li>
 							<li><a class="dropdown-item active?>" href="#">Français</a></li>
@@ -81,16 +82,16 @@
 		</div>
 
 		<div class="nav-base__right">
-			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item hidden-md-up">
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-btn hidden-md-up">
 				<svg class="icon icon-24 icon-phone"><use xlink:href="#icon-phone"></use></svg>
 			</a>
-			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item">
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-btn">
 				<svg class="icon icon-24 icon-heart"><use xlink:href="#icon-heart"></use></svg>
 			</a>
-			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-item">
+			<a href="cart.html" class="nav-base__btn btn toggle-sidebar-btn">
 				<svg class="icon icon-24 icon-user"><use xlink:href="#icon-user"></use></svg>
 			</a>
-			<a href="cart.html" class="nav-base__cart nav-base__btn btn btn-nav-cart toggle-sidebar-item d-flex-center">
+			<a href="cart.html" class="nav-base__cart nav-base__btn btn btn-nav-cart toggle-sidebar-btn d-flex-center">
 				<svg class="icon icon-24 icon-shopping-bag"><use xlink:href="#icon-shopping-bag"></use></svg>
 				<span class="nav-base__cart-label">Your order</span>
 			</a>
@@ -194,45 +195,92 @@
 	<div class="sidebar-menu nav-padding transition">
 	<div class="container">
 		<div class="sidebar-menu__wrapper">
-			<div class="sidebar-menu__category">
-				<ul class="sidebar-menu__category-list list-unstyled">
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/pizza-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Pizza</span>
-						</a>
-					</li>
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/sushi-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Sushi</span>
-						</a>
-					</li>
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/platters-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Platters</span>
-						</a>
-					</li>
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/salad-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Salads</span>
-						</a>
-					</li>
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/dessert-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Dessert</span>
-						</a>
-					</li>
-					<li class="sidebar-menu__category-li">
-						<a href="catalog.html" class="sidebar-menu__category-link">
-							<img src="img/icons/drink-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
-							<span class="link-text">Drinks</span>
-						</a>
-					</li>
-				</ul>
+			<div class="sidebar-menu__content-hold d-flex-center-x">
+				<div class="sidebar-menu__content w-100">
+					<div class="sidebar-menu__category p-5">
+						<ul class="sidebar-menu__category-list list-unstyled">
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/pizza-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Pizza</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/sushi-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Sushi</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/platters-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Platters</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/salad-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Salads</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/dessert-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Dessert</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/drink-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Drinks</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sidebar-menu__category p-5">
+						<ul class="sidebar-menu__category-list list-unstyled">
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/pizza-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Pizza</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/sushi-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Sushi</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/platters-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Platters</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/salad-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Salads</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/dessert-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Dessert</span>
+								</a>
+							</li>
+							<li class="sidebar-menu__category-li">
+								<a href="catalog.html" class="sidebar-menu__category-link">
+									<img src="img/icons/drink-bl.png" alt="" class="sidebar-menu__category-img icon-margin-lg">
+									<span class="link-text">Drinks</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-menu__bottom pb-4 mt-auto text-white fs-12">
+				© 2023 Company, Inc
 			</div>
 		</div>
 	</div>
