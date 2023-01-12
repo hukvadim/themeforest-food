@@ -21,6 +21,11 @@ $svgSizes: (12: 12px, 14: 14px, 16: 16px, 18: 18px, 22: 22px, 24: 24px, 36: 36px
 	svg.icon-#{$svgSizeKey}
 		--sz: #{rem($svgSizeVal)}
 
+// Color reverse 
+.color-filter-reverse
+	filter: invert(1) grayscale(100%) brightness(200%)
+
+// Font size of the main text elements
 .fs
 	&-title
 		&-1 // Maximum size
@@ -31,8 +36,16 @@ $svgSizes: (12: 12px, 14: 14px, 16: 16px, 18: 18px, 22: 22px, 24: 24px, 36: 36px
 
 // Font for numbers
 .ff-num
-	font-family: 'Montserrat', sans-serif
+	font-family: $font-family-sans-serif
 	font-weight: 600
+
+// Simple animation
+.transition
+	--time: 0.25s
+	--type: ease
+	--delay: 0s
+	--prop: all
+	transition: var(--time) var(--type) var(--delay) var(--prop)
 
 // Margin for icons
 .icon-margin
@@ -106,15 +119,6 @@ $svgSizes: (12: 12px, 14: 14px, 16: 16px, 18: 18px, 22: 22px, 24: 24px, 36: 36px
 	height: 100%
 
 
-// Simple animation
-.transition
-	--time: 0.25s
-	--type: ease
-	--delay: 0s
-	--prop: all
-	transition: var(--time) var(--type) var(--delay) var(--prop)
-
-
 // Base margin or padding for all blocks
 .divider-blocks
 	padding: rem(100px) 0
@@ -125,7 +129,7 @@ $svgSizes: (12: 12px, 14: 14px, 16: 16px, 18: 18px, 22: 22px, 24: 24px, 36: 36px
 	margin-bottom: rem(40px)
 
 
-// Position minimal offset
+// Position minimal offset (usually for some icons)
 .offset-t
 	&-none
 		top: 0 !important
@@ -233,3 +237,5 @@ $bem: '.hover-visible'
 .typography a
 	&::before
 		bottom: rem(1px)
+
+

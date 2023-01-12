@@ -13,17 +13,19 @@
 	"demo": {
 		
 		"text": {
-			"tel"    : "+38 (093) 21 21 495",
-			"telHref": "+380932121495",
-			"work-hours"  : "Пн-Нд:  10.00 – 17.00",
-			"work-online" : "Працюємо зараз",
-			"work-offline": "Робочий день закінчено",
+			"city"            : "California",
+			"tel"             : "+38 (093) 21 21 495",
+			"telHref"         : "+380932121495",
+			"work-hours"      : "Пн-Нд:  10.00 – 17.00",
+			"work-online"     : "Працюємо зараз",
+			"work-offline"    : "Робочий день закінчено",
 			"footer-copyright": "© 2023 Company, Inc"
 		},
 
 		"img": {
 			"info": "!!! Develop with 'img/' and then change to 'img/demo/'",
 			"path": "img",
+			"1000": "img/demo/img-1000.jpg",
 			"payment": "img/static/payments.png",
 			"social-gallery-img": "img/social-gallery/social-gallery-",
 			"social": {
@@ -32,6 +34,7 @@
 		}
 
 	},
+
 
 
 	"page": {

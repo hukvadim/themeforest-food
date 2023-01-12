@@ -3,20 +3,29 @@
 		<a href="#" class="card-img-link">
 			<img src="img/static/product-1.jpg" class="card-img hover-scale" alt="">
 		</a>
-		<div class="card-img-badge-holder card-img-badge-holder-left">
-			<span class="badge bg-info">New</span>
-		</div>
-		<div class="card-img-badge-holder card-img-badge-holder-right">
-			@@if (context.cartAdded) {
-			<span class="badge bg-secondary text-light badge-product-added d-flex-center-y" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Added to cart">
-				<svg class="icon icon-18 icon-cart-bag icon-margin"><use xlink:href="#icon-cart-bag"></use></svg><span class="num-added-cart ff-num">@@cartAdded</span>
-			</span>
-			}
-		</div>
+		@@if (context.badgeTop) {
+			<div class="card-img-badge-holder card-img-badge-holder-left">
+				<span class="badge bg-info">@@badgeTop</span>
+			</div>
+		}
+		@@if (context.cartAdded) {
+			<div class="card-img-badge-holder card-img-badge-holder-right">
+				<span class="badge bg-secondary text-light badge-product-added d-flex-center-y" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Added to cart">
+					<svg class="icon icon-18 icon-cart-bag icon-margin"><use xlink:href="#icon-cart-bag"></use></svg><span class="num-added-cart ff-num">@@cartAdded</span>
+				</span>
+			</div>
+		}
 		<div class="card-img-btn-holder">
-			<a href="#" class="btn btn-primary btn-cart btn-sm">
-				<svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg>
-			</a>
+			@@if (context.cartAdded) {
+				<a href="#" class="btn btn-primary btn-cart btn-sm">
+					+
+				</a>
+			}
+			@@if (!context.cartAdded) {
+				<a href="#" class="btn btn-primary btn-cart btn-sm">
+					<svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg>
+				</a>
+			}
 		</div>
 	</div>
 	<div class="card-body">

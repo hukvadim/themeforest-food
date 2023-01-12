@@ -62,14 +62,18 @@
 					<a href="tel:+380932121495" class="nav-base__box-phone-link toggle-sidebar-link link-mark-hover">+38 (093) 21 21 495</a>
 					<span class="nav-base__box-work-hours fs-12 d-flex-inline-center-y"><svg class="icon icon-clock icon-margin icon-14"><use xlink:href="#icon-clock"></use></svg>Пн-Нд:  10.00 – 17.00</span>
 				</div>
-				
 				<div class="nav-base__box-phone-bottom">
 					<div class="dropdown town-switch">
-						<span class="dropdown-toggle toggle-sidebar-text fs-14 cur-p" data-bs-toggle="dropdown">New York</span>
-						<ul class="dropdown-menu dropdown-menu-md-end dropdown-menu-lg-start">
-							<li><a class="dropdown-item active" href="#">English</a></li>
-							<li><a class="dropdown-item active?>" href="#">Français</a></li>
-						</ul>
+						<span class="dropdown-toggle toggle-sidebar-text fs-14 cur-p" data-bs-toggle="dropdown">California</span>
+						<div class="dropdown-menu dropdown-menu-md-end dropdown-menu-lg-start shadow">
+							<form class="dropdown-filter mb-2">
+								<input type="search" class="form-control form-control-sm fw-400 js-search-input" data-for="#js-town-switch" data-search-el=".dropdown-item" data-search-empty="#js-town-switch-empty" autocomplete="false" placeholder="Search...">
+							</form>
+							<p id="js-town-switch-empty" class="dropdown-filter-empty js-search-empty text-muted fs-14 px-1 mt-3 d-none">Nothing found...</p>
+							<ul id="js-town-switch" class="list-unstyled">
+								<li><a class="dropdown-item  active" href="#" data-city="california">California</a></li><li><a class="dropdown-item " href="#" data-city="new-york">New York</a></li><li><a class="dropdown-item " href="#" data-city="illinois">Illinois</a></li><li><a class="dropdown-item " href="#" data-city="arizona">Arizona</a></li><li><a class="dropdown-item " href="#" data-city="pennsylvania">Pennsylvania</a></li><li><a class="dropdown-item " href="#" data-city="texas">Texas</a></li><li><a class="dropdown-item " href="#" data-city="florida">Florida</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

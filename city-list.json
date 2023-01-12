@@ -1,0 +1,31 @@
+[
+	{
+		"title": "California",
+		"link" : "california",
+		"active": true
+	},
+	{
+		"title": "New York",
+		"link" : "new-york"
+	},
+	{
+		"title": "Illinois",
+		"link" : "illinois"
+	},
+	{
+		"title": "Arizona",
+		"link" : "arizona"
+	},
+	{
+		"title": "Pennsylvania",
+		"link" : "pennsylvania"
+	},
+	{
+		"title": "Texas",
+		"link" : "texas"
+	},
+	{
+		"title": "Florida",
+		"link" : "florida"
+	}
+]
