@@ -22,8 +22,19 @@ $svgSizes: (12: 12px, 14: 14px, 16: 16px, 18: 18px, 22: 22px, 24: 24px, 36: 36px
 		--sz: #{rem($svgSizeVal)}
 
 // Color reverse 
-.color-filter-reverse
-	filter: invert(1) grayscale(100%) brightness(200%)
+.color-reverse
+	&,
+	&-not-hover,
+	&-not-hover-before::before,
+	&-not-hover-after::after,
+	&-before::before,
+	&-after::after
+		filter: invert(1) grayscale(100%) brightness(200%)
+	&-not-hover
+		&:hover,
+		&-before:hover::before,
+		&-after:hover::after
+			filter: none
 
 // Font size of the main text elements
 .fs

@@ -59,14 +59,14 @@
 	<h2 class="h6 pt-4 pb-3 mb-4 border-bottom">On this page</h2>
 	<nav class="small" id="toc">
 		<ul class="list-unstyled">
-			<li class="my-2">
-				<button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+			<li class="my-2 js-collapse-nav-li">
+				<button class="btn d-inline-flex align-items-center collapsed border-0" id="test-collapse" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
 				<ul class="list-unstyled ps-3 collapse" id="contents-collapse">
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#typography">Typography</a></li>
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tables">Tables</a></li>
 				</ul>
 			</li>
-			<li class="my-2">
+			<li class="my-2 js-collapse-nav-li">
 				<button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#forms-collapse" aria-controls="forms-collapse">Forms</button>
 				<ul class="list-unstyled ps-3 collapse" id="forms-collapse">
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#overview">Overview</a></li>
@@ -77,7 +77,7 @@
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#validation">Validation</a></li>
 				</ul>
 			</li>
-			<li class="my-2">
+			<li class="my-2 js-collapse-nav-li">
 				<button class="btn d-inline-flex align-items-center collapsed border-0" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#components-collapse" aria-controls="components-collapse">Components</button>
 				<ul class="list-unstyled ps-3 collapse" id="components-collapse">
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#accordion">Accordion</a></li>
@@ -99,12 +99,13 @@
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#spinners">Spinners</a></li>
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#toasts">Toasts</a></li>
 					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#tooltips">Tooltips</a></li>
+					<li><a class="d-inline-flex align-items-center rounded text-decoration-none" href="#colors">Colors</a></li>
 				</ul>
 			</li>
 		</ul>
 	</nav>
 </aside>
-<div class="bd-cheatsheet container-fluid bg-body">
+<div class="bd-cheatsheet container-fluid bg-body" data-bs-spy="scroll" data-bs-target="#toc" data-bs-offset="0">
 	<section id="content">
 		<h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
 
@@ -114,7 +115,8 @@
 				<a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/content/typography/" target="_blank">Documentation</a>
 			</div>
 
-			<div class="typography2">
+			<div class="typography">
+
 				<div class="bd-example-snippet bd-code-snippet">
 					<div class="bd-example">
 						<p class="display-1">Display 1</p>
@@ -141,8 +143,14 @@
 
 				<div class="bd-example-snippet bd-code-snippet">
 					<div class="bd-example">
+						<p>
+							This is a paragraph. It stands out from regular paragraphs. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Ducimus eos porro iste distinctio rem illo deleniti facere tempore tenetur, sequi magni neque quam ad possimus? Deserunt consequatur doloremque vero harum similique veritatis nihil itaque ea ullam et, laboriosam perferendis id eius nobis hic officiis doloribus sed deleniti fuga consequuntur rerum quidem eos! Provident optio porro illum atque.
+						</p>
 						<p class="lead">
-							This is a lead paragraph. It stands out from regular paragraphs.
+							This is a paragraph with css class. It stands out from regular paragraphs. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Ducimus eos porro iste distinctio rem illo deleniti facere tempore tenetur, sequi magni neque quam ad possimus? Deserunt consequatur doloremque vero harum similique veritatis nihil itaque ea ullam et, laboriosam perferendis id eius nobis hic officiis doloribus sed deleniti fuga consequuntur rerum quidem eos! Provident optio porro illum atque.
+						</p>
+						<p class="js-text-trim">
+							This is a paragraph with css class. It stands out from regular paragraphs. Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Ducimus eos porro iste distinctio rem illo deleniti facere tempore tenetur, sequi magni neque quam ad possimus? Deserunt consequatur doloremque vero harum similique veritatis nihil itaque ea ullam et, laboriosam perferendis id eius nobis hic officiis doloribus sed deleniti fuga consequuntur rerum quidem eos! Provident optio porro illum atque.
 						</p>
 					</div>
 				</div>
@@ -150,7 +158,7 @@
 
 				<div class="bd-example-snippet bd-code-snippet">
 					<div class="bd-example">
-						<p><a href="#" class="link-mark">You can</a> use the <a href="#">mark tag</a> to <mark>highlight</mark> text.</p>
+						<p><a href="#" class="link-mark">You can</a> use the <a href="#">link mark</a> and <mark>highlight text</mark>.</p>
 						<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
 						<p><del>This line of text is meant to be treated as deleted text.</del></p>
 						<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
@@ -424,12 +432,25 @@
 								<label for="exampleInputTextareaAutogrow" class="form-label">Textarea autogrow</label>
 								<textarea class="form-control autogrow" id="exampleInputTextareaAutogrow"></textarea>
 							</div>
-							<div class="mb-3 form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1">Check me out</label>
-							</div>
 							<fieldset class="mb-3">
-								<legend>Radios buttons</legend>
+								<legend>Check buttons</legend>
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="exampleCheck1">
+									<label class="form-check-label" for="exampleCheck1">Check me out</label>
+								</div>
+								<div class="d-flex" style="margin: 20px 0 10px;">
+									<div class="form-nice-check">
+										<input type="checkbox" class="btn-check" id="btn-check">
+										<label class="btn btn-outline-primary btn-sm" for="btn-check">Nice check default</label>
+									</div>
+									<div class="form-nice-check mx-3">
+										<input type="checkbox" class="btn-check" id="btn-check-2" checked>
+										<label class="btn btn-outline-primary btn-sm" for="btn-check-2">Nice check checked</label>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="mb-3">
+								<legend>Radio buttons</legend>
 								<div class="form-check">
 									<input type="radio" name="radios" class="form-check-input" id="exampleRadio1">
 									<label class="form-check-label" for="exampleRadio1">Default radio</label>
@@ -437,6 +458,16 @@
 								<div class="mb-3 form-check">
 									<input type="radio" name="radios" class="form-check-input" id="exampleRadio2">
 									<label class="form-check-label" for="exampleRadio2">Another radio</label>
+								</div>
+								<div class="d-flex" style="margin: 20px 0 10px;">
+									<div class="form-nice-check">
+										<input type="radio" name="tmp-nice-radio" class="btn-check" id="btn-radio">
+										<label class="btn btn-outline-dark btn-sm" for="btn-radio">Nice radio default</label>
+									</div>
+									<div class="form-nice-check mx-3">
+										<input type="radio" name="tmp-nice-radio" class="btn-check" id="btn-radio-2" checked>
+										<label class="btn btn-outline-dark btn-sm" for="btn-radio-2">Nice radio checked</label>
+									</div>
 								</div>
 							</fieldset>
 							<div class="mb-3">
@@ -858,14 +889,14 @@
 				<div class="bd-example-snippet bd-code-snippet">
 					<div class="bd-example">
 
-						<span class="badge rounded-pill bg-primary">Primary</span>
-						<span class="badge rounded-pill bg-secondary">Secondary</span>
-						<span class="badge rounded-pill bg-success">Success</span>
-						<span class="badge rounded-pill bg-danger">Danger</span>
-						<span class="badge rounded-pill text-bg-warning">Warning</span>
-						<span class="badge rounded-pill text-bg-info">Info</span>
-						<span class="badge rounded-pill text-bg-light">Light</span>
-						<span class="badge rounded-pill bg-dark">Dark</span>
+						<span class="badge bg-primary">Primary</span>
+						<span class="badge bg-secondary">Secondary</span>
+						<span class="badge bg-success">Success</span>
+						<span class="badge bg-danger">Danger</span>
+						<span class="badge text-bg-warning">Warning</span>
+						<span class="badge text-bg-info">Info</span>
+						<span class="badge text-bg-light">Light</span>
+						<span class="badge bg-dark">Dark</span>
 					</div>
 				</div>
 
@@ -918,7 +949,6 @@
 
 				<div class="bd-example-snippet bd-code-snippet">
 					<div class="bd-example">
-
 						<button type="button" class="btn btn-outline-primary">Primary</button>
 						<button type="button" class="btn btn-outline-secondary">Secondary</button>
 						<button type="button" class="btn btn-outline-success">Success</button>
@@ -968,6 +998,23 @@
 						<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
 						<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-18 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
 						<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-22 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
+					</div>
+					<div class="bd-example">
+						<button type="button" class="btn btn-primary btn-counter btn-sm">
+							<span class="btn-counter__minus">-</span>
+							<input type="number" class="btn-counter__count" name="num" value="1">
+							<span class="btn-counter__plus">+</span>
+						</button>
+						<button type="button" class="btn btn-primary btn-counter">
+							<span class="btn-counter__minus">-</span>
+							<input type="number" class="btn-counter__count" name="num" value="1">
+							<span class="btn-counter__plus">+</span>
+						</button>
+						<button type="button" class="btn btn-primary btn-counter btn-lg">
+							<span class="btn-counter__minus">-</span>
+							<input type="number" class="btn-counter__count" name="num" value="1">
+							<span class="btn-counter__plus">+</span>
+						</button>
 					</div>
 				</div>
 
@@ -1163,7 +1210,7 @@
 					<div class="bd-example">
 						<div class="btn-group w-100 align-items-center justify-content-between flex-wrap">
 							<div class="dropdown">
-								<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<button class="btn btn-secondary btn-sm dropdown-toggle color-reverse-not-hover-after" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 									Dropdown button
 								</button>
 								<ul class="dropdown-menu">
@@ -1180,7 +1227,7 @@
 								</ul>
 							</div>
 							<div class="dropdown">
-								<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<button class="btn btn-secondary dropdown-toggle color-reverse-after" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 									Dropdown button
 								</button>
 								<ul class="dropdown-menu">
@@ -1197,7 +1244,7 @@
 								</ul>
 							</div>
 							<div class="dropdown">
-								<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<button class="btn btn-secondary btn-lg dropdown-toggle color-reverse-after" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 									Dropdown button
 								</button>
 								<ul class="dropdown-menu">
@@ -1775,14 +1822,27 @@
 			<div>
 				<div class="bd-example-snippet bd-code-snippet">
 
-					<button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+					<button type="button" class="btn btn-primary" data-bs-toast="#liveToast">Show live toast</button>
+
+					<div class="toast-container position-fixed bottom-0 end-0 p-3">
+						<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+							<div class="toast-header">
+								<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff" /></svg>
+								<strong class="me-auto">Bootstrap</strong>
+								<small>11 mins ago</small>
+								<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+							</div>
+							<div class="toast-body">
+								Hello, world! This is a toast message.
+							</div>
+						</div>
+					</div>
 
 					<div class="bd-example p-5 align-items-center row">
 						<div class="col-md-4">
 							<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
 								<div class="toast-header">
-									<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-										<rect width="100%" height="100%" fill="#007aff" /></svg>
+									<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#007aff" /></svg>
 									<strong class="me-auto">Olivia</strong>
 									<small class="text-muted">11 mins ago</small>
 									<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -1826,8 +1886,361 @@
 
 			</div>
 		</article>
+		<article class="mt-3 mb-5 pb-5" id="colors">
+			<div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+				<h3>Colors</h3>
+				<a class="d-flex align-items-center" href="https://getbootstrap.com/docs/5.3/customize/color/" target="_blank">Documentation</a>
+			</div>
+
+			<div>
+				<div class="bd-example-snippet bd-code-snippet">
+					<table class="table table-swatches">
+	<thead>
+		<tr>
+			<th style="width: 340px;">Description</th>
+			<th style="width: 200px;" class="ps-0">Swatch</th>
+			<th>Variables</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td rowspan="2">
+				<strong>Body —</strong> Default foreground (color) and background, including components.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2" style="background-color: var(--bs-body-color);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-body-color</code><br><code>--bs-body-color-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="p-3 rounded-2 border" style="background-color: var(--bs-body-bg);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-body-bg</code><br><code>--bs-body-bg-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">
+				<strong>Secondary —</strong> Use the <code>color</code> option for lighter text. Use the <code>bg</code> option for dividers and to indicate disabled component states.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2" style="background-color: var(--bs-secondary-color);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-secondary-color</code><br><code>--bs-secondary-color-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="p-3 rounded-2 border" style="background-color: var(--bs-secondary-bg);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-secondary-bg</code><br><code>--bs-secondary-bg-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">
+				<strong>Tertiary —</strong> Use the <code>color</code> option for even lighter text. Use the <code>bg</code> option to style backgrounds for hover states, accents, and wells.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2" style="background-color: var(--bs-tertiary-color);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-tertiary-color</code><br><code>--bs-tertiary-color-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="p-3 rounded-2 border" style="background-color: var(--bs-tertiary-bg);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-tertiary-bg</code><br><code>--bs-tertiary-bg-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>Emphasis —</strong> For higher contrast text. Not applicable for backgrounds.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2" style="background-color: var(--bs-emphasis-color);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-emphasis-color</code><br><code>--bs-emphasis-color-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<strong>Border —</strong> For component borders, dividers, and rules. Use <code>--bs-border-color-translucent</code> to blend with backgrounds with an <code>rgba()</code> value.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2" style="background-color: var(--bs-border-color);">&nbsp;</div>
+			</td>
+			<td>
+				<code>--bs-border-color</code><br><code>--bs-border-color-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Primary —</strong> Main theme color, used for hyperlinks, focus styles, and component and form active states.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-primary">Primary</div>
+			</td>
+			<td>
+				<code>--bs-primary</code><br><code>--bs-primary-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-primary-bg-subtle); --bs-border-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-primary-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-border-subtle); color: var(--bs-primary-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-primary-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-primary-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-primary-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Success —</strong> Theme color used for positive or successful actions and information.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-success">Success</div>
+			</td>
+			<td>
+				<code>--bs-success</code><br><code>--bs-success-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-success-bg-subtle); --bs-border-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-success-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-border-subtle); color: var(--bs-success-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-success-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-success-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-success-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Danger —</strong> Theme color used for errors and dangerous actions.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-danger">Danger</div>
+			</td>
+			<td>
+				<code>--bs-danger</code><br><code>--bs-danger-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-danger-bg-subtle); --bs-border-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-danger-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-border-subtle); color: var(--bs-danger-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-danger-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-danger-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-danger-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Warning —</strong> Theme color used for non-destructive warning messages.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-warning">Warning</div>
+			</td>
+			<td>
+				<code>--bs-warning</code><br><code>--bs-warning-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-warning-bg-subtle); --bs-border-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-warning-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-border-subtle); color: var(--bs-warning-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-warning-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-warning-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-warning-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Info —</strong> Theme color used for neutral and informative content.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-info">Info</div>
+			</td>
+			<td>
+				<code>--bs-info</code><br><code>--bs-info-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-info-bg-subtle); --bs-border-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-info-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-info-border-subtle); color: var(--bs-info-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-info-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-info-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-info-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Light —</strong> Additional theme option for less contrasting colors.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-light border">Light</div>
+			</td>
+			<td>
+				<code>--bs-light</code><br><code>--bs-light-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-light-bg-subtle); --bs-border-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-light-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-light-border-subtle); color: var(--bs-light-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-light-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-light-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-light-text</code>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<strong>Dark —</strong> Additional theme option for higher contrasting colors.
+			</td>
+			<td class="ps-0">
+				<div class="p-3 rounded-2 text-bg-dark border">Dark</div>
+			</td>
+			<td>
+				<code>--bs-dark</code><br><code>--bs-dark-rgb</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2 border" style="background-color: var(--bs-dark-bg-subtle); --bs-border-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Background subtle</div>
+			</td>
+			<td>
+				<code>--bs-dark-bg-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 rounded-2" style="background-color: var(--bs-dark-border-subtle); color: var(--bs-dark-text);">Border subtle</div>
+			</td>
+			<td>
+				<code>--bs-dark-border-subtle</code>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="px-3 py-2 h-100 rounded-2" style="background-color: var(--bs-dark-text); color: var(--bs-body-bg);">Text</div>
+			</td>
+			<td>
+				<code>--bs-dark-text</code>
+			</td>
+		</tr>
+	</tbody>
+</table>
+				</div>
+			</div>
+		</article>
 	</section>
 </div>
+
+
+
+
+
+
+
 
 <div class="modal fade" id="exampleModalDefault" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
@@ -1995,7 +2408,6 @@
 
 	.bd-aside .active {
 	  font-weight: 600;
-	  color: rgba(0, 0, 0, .85);
 	}
 
 	.bd-aside .btn {
@@ -2004,9 +2416,10 @@
 	  color: rgba(0, 0, 0, .65);
 	}
 
+	.bd-aside .active,
 	.bd-aside .btn:hover,
 	.bd-aside .btn:focus {
-	  color: rgba(0, 0, 0, .85);
+	  color: #406cf5;
 	  background-color: rgba(121, 82, 179, .1);
 	}
 
@@ -2058,7 +2471,8 @@
 	  }
 
 	  .bd-header {
-		position: absolute;
+		position: fixed;
+		/*position: absolute;*/
 		top: 0;
 		/* rtl:begin:ignore */
 		right: 0;
@@ -2066,6 +2480,12 @@
 		/* rtl:end:ignore */
 		z-index: 1030;
 		grid-column: 1 / span 3;
+	  }
+	  .bd-header h1 a {
+		color: #fff
+	  }
+	  .bd-header h1 a:hover {
+		color: var(--bs-link-color)
 	  }
 
 	  .bd-aside,
@@ -2107,7 +2527,7 @@
 		/* rtl:end:ignore */
 		z-index: -1;
 		content: "";
-		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));
+		/*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) calc(100% - 3rem), rgba(255, 255, 255, .01));*/
 	  }
 
 	  .bd-cheatsheet article,

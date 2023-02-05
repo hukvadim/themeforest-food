@@ -17,57 +17,15 @@
 
 <div class="container-fluid mt-5">
 
-	<div class="d-flex">
-		@@include('block--card-product.html')
-		<div style="width: 30px;"></div>
-		@@include('block--card-product.html', {
-			"cssClass": "card-product--dark",
-			"badgeTop": "New",
-			"cartAdded": "3",
-		})
+	<div class="form-nice-check">
+		<input type="radio" name="sfsdfsd" class="btn-check" id="btn-check" checked>
+		<label class="btn btn-outline-warning btn-sm" for="btn-check">Nice checked</label>
 	</div>
-
-	<br><br>
-	<h1>Buttons</h1>
-	<button type="button" class="btn btn-primary btn-sm">Primary</button>
-	<button type="button" class="btn btn-primary">Primary</button>
-	<button type="button" class="btn btn-primary btn-lg">Primary</button>
-	<button type="button" class="btn btn-primary btn-cart btn-sm"><svg class="icon icon-16 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart"><svg class="icon icon-18 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-	<button type="button" class="btn btn-primary btn-cart btn-lg"><svg class="icon icon-22 icon-cart"><use xlink:href="#icon-cart"></use></svg></button>
-
-	<br><br>
-	<button type="button" class="btn btn-shadow btn-sm">Детальніше про доставку</button>
-	<button type="button" class="btn btn-shadow">Детальніше про доставку</button>
-	<button type="button" class="btn btn-shadow btn-lg">Детальніше про доставку</button>
-	<br><br>
-
-	<button type="button" class="btn btn-secondary">Secondary</button>
-	<button type="button" class="btn btn-success">Success</button>
-	<button type="button" class="btn btn-danger">Danger</button>
-	<button type="button" class="btn btn-warning">Warning</button>
-	<button type="button" class="btn btn-info">Info</button>
-	<button type="button" class="btn btn-light">Light</button>
-	<button type="button" class="btn btn-dark">Dark</button>
-	<button type="button" class="btn btn-link">Link</button>
-	<button type="button" class="btn btn-shadow ">Детальніше про доставку</button>
-
-	<br><br>
-
-	<button type="button" class="btn btn-outline-primary">Primary</button>
-	<button type="button" class="btn btn-outline-secondary">Secondary</button>
-	<button type="button" class="btn btn-outline-success">Success</button>
-	<button type="button" class="btn btn-outline-danger">Danger</button>
-	<button type="button" class="btn btn-outline-warning">Warning</button>
-	<button type="button" class="btn btn-outline-info">Info</button>
-	<button type="button" class="btn btn-outline-light">Light</button>
-	<button type="button" class="btn btn-outline-dark">Dark</button>
-
-	<br><br>
-
-	<a href="#">More</a>
-	<a href="#" class="link-mark">More</a>
-
+	<br>
+	<div class="form-nice-check">
+		<input type="radio" name="sfsdfsd" class="btn-check" id="btn-check-2">
+		<label class="btn btn-outline-warning btn-sm" for="btn-check-2">Nice uncheck</label>
+	</div>
 
 	<br><br><br><br>
 	<h1>Forms</h1>
@@ -141,19 +99,6 @@
 			</div>
 		</div>
 		<div class="mb-3">
-			<input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-			<label class="btn btn-primary" for="btn-check">Check як в petsi</label>
-
-			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-			<label class="btn btn-sm btn-primary" for="option1">Checked</label>
-
-			<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
-			<label class="btn btn-sm btn-primary" for="option2">Radio</label>
-
-			<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
-			<label class="btn btn-sm btn-primary" for="option3">Disabled</label>
-		</div>
-		<div class="mb-3">
 			<label for="customRange1" class="form-label">Example range</label>
 			<input type="range" class="form-range" id="customRange1">
 		</div>
@@ -200,23 +145,6 @@
 			<button class="btn btn-primary" type="submit">Submit form</button>
 		</div>
 	</form>
-
-	<div class="mb-3">
-		<span class="badge text-bg-primary">Primary</span>
-		<span class="badge text-bg-secondary">Secondary</span>
-		<span class="badge text-bg-success">Success</span>
-		<span class="badge text-bg-danger">Danger</span>
-		<span class="badge text-bg-warning">Warning</span>
-		<span class="badge text-bg-info">Info</span>
-		<span class="badge text-bg-light">Light</span>
-		<span class="badge text-bg-dark">Dark</span>
-		<h1>Example heading <span class="badge bg-secondary">New</span></h1>
-		<h2>Example heading <span class="badge bg-secondary">New</span></h2>
-		<h3>Example heading <span class="badge bg-secondary">New</span></h3>
-		<h4>Example heading <span class="badge bg-secondary">New</span></h4>
-		<h5>Example heading <span class="badge bg-secondary">New</span></h5>
-		<h6>Example heading <span class="badge bg-secondary">New</span></h6>
-	</div>
 
 
 </div>
